@@ -1,0 +1,77 @@
+body{
+    background: url("../imagenestfg/fondo.png") no-repeat;
+}
+
+header,  article{
+    margin: 20px 50px;
+}
+
+nav.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    margin-bottom: 50px;
+}
+
+.cabecera{
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
+.navbar-collapse{
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar-nav{
+    gap: 100px;
+    background-color: white;
+    border: 1px solid black;
+}
+ header a:link{
+    text-decoration: none;
+    color: black;
+}
+
+article > p{
+    text-align: center;
+}
+article > img{
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0);
+    border-top: 25px solid #b5bd00;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.imagenes{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.contacto, .ubicacion{
+    margin: 15px;
+}
+
+.d-flex{
+    margin-top: 30px;
+}
+
+

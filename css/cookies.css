@@ -1,0 +1,53 @@
+.cookies{
+    display: none;
+    background: #fff;
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 300px;
+    line-height: 150%;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, .25);
+    text-align: center;
+}
+
+.cookies.activo{
+    display: block;
+}
+
+.cookies .titulo, 
+.cookies .parrafo{
+    margin-bottom: 15px;
+}
+
+.cookies .boton{
+    width: 100%;
+    background: #595959;
+    border: none;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.cookies .boton:hover{
+    background: #000;
+}
+
+.cookies .enlace{
+    text-decoration: none;
+    color: #4dbfff;
+    font-size: 14px;
+}
+
+.cookies .enlace:hover{
+    text-decoration: underline;
+}
+
