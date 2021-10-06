@@ -1,0 +1,10 @@
+.folletos{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+
+.card-body a{
+    text-decoration: none;
+}
