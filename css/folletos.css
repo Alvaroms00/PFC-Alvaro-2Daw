@@ -1,3 +1,9 @@
+.catalogo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .folletos{
     display: flex;
     flex-direction: row;
