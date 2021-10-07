@@ -15,6 +15,7 @@ nav.header{
     margin-bottom: 50px;
 }
 
+
 .cabecera{
     position: sticky;
     top: -1px;
@@ -26,12 +27,14 @@ nav.header{
     align-items: center;
 
 }
+
 .navbar-nav{
     gap: 100px;
     background-color: white;
     border: 1px solid black;
 }
- header a:link{
+
+header a{
     text-decoration: none;
     color: black;
 }
@@ -45,6 +48,7 @@ article > img{
     margin: auto;
     margin-bottom: 30px;
 }
+
 .productos{
     display: flex;
     flex-direction: row;
