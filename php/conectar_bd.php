@@ -2,7 +2,7 @@
     $servidor = "localhost";
     $usuario = "root";
     $contrasena = "";
-    $db=mysql_connect($servidor,$usuario,$contrasena);
+    $mysql_connect($servidor,$usuario,$contrasena);
     mysql_select_db("ferreteria",$db);
 
     if (!$db_connection) {
