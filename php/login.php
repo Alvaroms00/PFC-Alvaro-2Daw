@@ -1,9 +1,5 @@
 <?php
-    $servidor = "localhost";
-    $usuario = "root";
-    $contraseña = "";
-    $db=mysql_connect($servidor,$usuario,$contrasena);
-    mysql_select_db("ferreteria",$db);
+    include('conectar_bd.php');
 
     $nombre = $_POST["usuario"];
     $contraseña = $_POST["contraseña"];
