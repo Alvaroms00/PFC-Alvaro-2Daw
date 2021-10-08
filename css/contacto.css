@@ -20,8 +20,6 @@ input{
     padding-left: 10px;
     margin-bottom: 20px; 
 }
-
-  
   
 textarea{
     background-color: #fbfbfb; 
@@ -37,12 +35,10 @@ textarea{
     padding-top: 15px; 
 }
   
-  
 label{
     display: block; 
     float: center;  
 }
-  
   
 button{
     width: 408px; 
@@ -58,39 +54,33 @@ button{
     border-radius: 10px;  
     cursor: pointer;
 }
-  
-  
+ 
 .formulario button p{
     color: #fff; 
-}
-  
+}  
   
 span{
     color: red; 
-}
-  
+} 
   
 .aviso{
     font-size: 13px;  
     color: #0e0e0e;  
 }
-  
-  
+ 
 h1{
     font-size: 39px;  
     text-align: letf; 
     padding-bottom: 20px; 
     color: #b5bd00;
-}
-  
+} 
   
 h5{
     font-size: 16px; 
     padding-bottom: 30px;
     color: #0e0e0e;   
-}
-  
-  
+}  
+
 .formulario p{
     font-size: 14px; 
     color: #0e0e0e; 
