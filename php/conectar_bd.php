@@ -1,13 +1,16 @@
 <?php 
     $servidor = "localhost";
-    $usuario = "root";
-    $contrasena = "";
-    $db=mysql_connect($servidor,$usuario,$contrasena);
-    mysql_select_db("ferreteria",$db);
+    $usuario_bd = "root";
+    $clave_bd = "";
+    $basededatos= "ferreteria";
 
-    if (!$db_connection) {
-        die('No se ha podido conectar a la base de datos');
-    }
+    $conexion = mysqli_connect ($servidor,$usuario_bd,$clave_bd);
+
+    $db = mysqli_select_db($conexion, $basededatos);
     
-    mysql_close($db)
+    if (! $conexion){
+        echo "ERROR: Imposible establecer conexión con el servidor (puede que este desactivado o que no se encuentre en el servidor $servidor).<br>\n";
+    }else{
+        echo "Conexión realizada con el servidor.<br>\n";
+    }
 ?>
