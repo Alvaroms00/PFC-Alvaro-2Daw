@@ -19,8 +19,6 @@ label{
     float: center;
 }
 
-
-
 input{
     background-color: #fbfbfb; 
     width: 408px; 
@@ -33,7 +31,6 @@ input{
     padding-left: 10px;
     margin-bottom: 20px; 
 }
-
 
 button{
     width: 408px; 
