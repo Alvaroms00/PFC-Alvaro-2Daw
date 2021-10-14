@@ -53,12 +53,9 @@ button{
     border-style: solid; 
     border-radius: 10px;  
     cursor: pointer;
+    color: white;
 }
- 
-.formulario button p{
-    color: #fff; 
-}  
-  
+   
 span{
     color: red; 
 } 
