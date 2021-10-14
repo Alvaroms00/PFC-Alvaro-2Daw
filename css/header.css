@@ -1,5 +1,7 @@
 body{
     background: url("../imagenestfg/fondo.png") no-repeat;
+    background-position: bottom;
+    background-position: right;
 }
 
 header,  article{
