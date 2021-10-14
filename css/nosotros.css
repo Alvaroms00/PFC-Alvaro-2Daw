@@ -2,8 +2,9 @@ li{
     list-style: none;
 }
 
-strong{
+article strong{
     text-align: left;
+    text-decoration: underline;
 }
 
 p{
