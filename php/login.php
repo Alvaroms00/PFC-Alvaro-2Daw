@@ -4,7 +4,7 @@
     $nombre = $_POST["nombre"];
     $contraseña = $_POST["contraseña"];
 
-    $consulta = "SELECT * FROM usuarios WHERE 1";
+    $consulta = "SELECT $nombre, $hash FROM usuarios";
 
     if (mysqli_query($conexion, $consulta)) {
         echo "Se ha iniciado sesión correctamente";
