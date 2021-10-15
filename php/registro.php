@@ -8,7 +8,9 @@ if (isset($_POST["nombre"], $_POST["telefono"], $_POST["email"], $_POST["contras
     $email = $_POST["email"];
     $contraseña = $_POST["contraseña"];
 
-    $insertar = "INSERT INTO usuarios (id, nombre, telefono, email, contraseña) VALUES ('0', '$nombre', '$telefono', '$email', '$contraseña')";
+    $hash = password_hash($contraseña, PASSWORD_BCRYPT);
+
+    $insertar = "INSERT INTO usuarios (id, nombre, telefono, email, contraseña) VALUES ('0', '$nombre', '$telefono', '$email', '$hash')";
 
 }else {
     echo "Por favor introduzca todos los datos.";
