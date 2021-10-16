@@ -1,0 +1,16 @@
+article > p{
+    text-align: center;
+}
+
+article > img{
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}

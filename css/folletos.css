@@ -4,6 +4,10 @@
     gap: 20px;
 }
 
+p{
+    text-align: center;
+}
+
 .folletos{
     display: flex;
     flex-direction: row;

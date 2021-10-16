@@ -1,12 +1,15 @@
-li{
-    list-style: none;
+article li{
+    text-align: left;
+    margin-left: 50px;
 }
 
 article strong{
-    text-align: left;
     text-decoration: underline;
 }
 
-p{
+article p{
     text-align: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
