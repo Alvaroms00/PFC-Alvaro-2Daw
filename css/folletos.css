@@ -21,6 +21,11 @@ p{
     text-decoration: none;
 }
 
+.folletos img{
+    width: 240px;
+    height: 360px;
+}
+
 .texto{
     color: black;
 }

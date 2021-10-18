@@ -8,6 +8,11 @@ article > img{
     margin-bottom: 30px;
 }
 
+.ofertas img{
+    width: 238px;
+    height: 238px;
+}
+
 .productos{
     display: flex;
     flex-direction: row;
