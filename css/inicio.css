@@ -23,3 +23,10 @@ article > img{
     justify-content: center;
     gap: 50px;
 }
+
+.carousel-control-prev, .carousel-control-next{
+    margin-top: 90px;
+    margin-bottom: 90px;
+    width: 270px;
+    height: 270px;
+}
