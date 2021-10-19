@@ -13,6 +13,10 @@ article > img{
     height: 238px;
 }
 
+.ofertas img:hover{
+    border: 1px solid #b5bd00;
+}
+
 .productos{
     display: flex;
     flex-direction: row;
