@@ -11,6 +11,9 @@ aside{
     position: sticky;
     top: -1px;
     z-index: 1;
+    overflow-y: auto;
+    width: 320px;
+    height: 604px;
 }
 
 aside > a{
