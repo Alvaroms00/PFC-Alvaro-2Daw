@@ -6,6 +6,16 @@
     gap: 40px;
     margin-bottom: 20px;
 }
+aside{
+    float: left;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
+aside > a{
+    margin-top: 0px;
+}
 
 .caja{
     background-color: rgba(0, 0, 0, .25);
@@ -14,19 +24,22 @@
     box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, .25);
     width: 700px;
     height: 292px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .caja p{
-    margin: 80px 80px;
+    float: left;
+    margin: 3.75rem 0px;
+    padding: 0.625rem;
     font-size: 18px;
     color: black;
 }
 
 .caja img{
-    float: left;
-    margin: 20px;
-    width: 250px;
-    height: 250px;
+    margin: 1.25rem 3.125rem;
+    width: 15.625rem;
+    height: 15.625rem;
 }
 
 .btn{
@@ -44,4 +57,19 @@
 
 .caja img:hover{
     border-color: #b5bd00;
+}
+
+@media (max-width: 1200px){
+    .caja p{
+        font-size: 14px;
+    }
+
+    .caja img{
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 992px){
+
 }
