@@ -7,6 +7,16 @@
     margin-bottom: 20px;
 }
 
+aside{
+    float: left;
+    overflow-y: auto;
+    width: 298px;
+    height: 604px;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+}
+
 .caja{
     background-color: rgba(0, 0, 0, .25);
     border: 1px solid rgba(222, 222, 222, .25);

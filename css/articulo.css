@@ -10,6 +10,16 @@ nav, .producto, .descripcion{
     gap: 100px;
 }
 
+aside{
+    float: left;
+    overflow-y: auto;
+    width: 298px;
+    height: 604px;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+}
+
 nav a{
     text-decoration: none;
     color: #6c757d;;
