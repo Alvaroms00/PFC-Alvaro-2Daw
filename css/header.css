@@ -5,7 +5,7 @@ body{
 }
 
 header,  article{
-    margin: 1.25rem 3.125rem;
+    margin: 20px 50px;
 }
 
 nav.header{
@@ -51,36 +51,14 @@ footer{
 }
 
 .imagenes{
-    margin-left: 3.125rem;
-    margin-top: 1.875rem;
-    margin-bottom: 1.875rem;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .contacto, .ubicacion{
-    margin: 0.9375rem;
+    margin: 15px;
 }
 
 .d-flex{
     margin-top: 30px;
-}
-
-@media (max-width: 1200px){
-    body{
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 992px){
-
-
-}
-
-@media(max-width: 768px){
-
-}
-
-@media (max-width: 576px) {
-    body{
-        font-size: 12px;
-    }
-
 }

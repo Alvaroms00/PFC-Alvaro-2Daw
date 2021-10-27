@@ -19,13 +19,6 @@ nav a:hover{
     color: #b5bd00;
 }
 
-aside{
-    float: left;
-    position: sticky;
-    top: -1;
-    z-index: 1  ;
-}
-
 .producto img{
     width: 446px;
     height: 357px;
