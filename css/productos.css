@@ -16,6 +16,11 @@ aside{
     top: 10px;
     z-index: 1;
 }
+article > p{
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 22px;
+}
 
 .caja{
     background-color: rgba(0, 0, 0, .25);
