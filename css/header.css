@@ -51,7 +51,7 @@ footer{
     color: white;
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 60px;
 }
 
 .imagenes{
