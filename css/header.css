@@ -40,6 +40,10 @@ header a{
     color: black;
 }
 
+header a:hover{
+    color: #b5bd00;
+}
+
 footer{
     margin-top: 20px;
     background-color: rgb(0, 0, 0);
