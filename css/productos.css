@@ -14,8 +14,9 @@ aside{
     height: 604px;
     position: sticky;
     top: 10px;
-    z-index: 1;
+    z-index: 0;
 }
+
 article > p{
     text-align: center; 
     font-weight: bold; 

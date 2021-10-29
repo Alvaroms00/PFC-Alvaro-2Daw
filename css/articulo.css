@@ -2,6 +2,33 @@ nav{
     margin: 20px 150px;
 }
 
+.boton-subir{
+    padding: 0;
+    display: block;
+    position: fixed;
+    z-index: 99;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    text-decoration: none;
+}
+
+.subir:hover{
+    color: white;
+}
+
+.subir{
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: rgba(0,0,0,.5);
+    float: right;
+    text-align: center;
+    border: 1px solid #b5bd00;
+}
+
 .articulo{
     display: flex;
     flex-direction: column;
@@ -31,7 +58,8 @@ aside{
     height: 800px;
     position: sticky;
     top: 10px;
-    z-index: 1;
+    z-index: 0;
+    background-color: transparent;
 }
 
 nav a{
@@ -48,6 +76,10 @@ nav a:hover{
     height: 357px;
 }
 
+.producto h1{
+    font-size: 22px;
+}
+
 /* descripcion del producto */
 .nav-tabs{
     display: flex;
@@ -60,20 +92,18 @@ nav a:hover{
 
 .tab-content{
     padding: 20px;
-    background-color: #fcfcfc;
     width: 1355px;
     height: 540px;
 }
 
-.tab-content ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.tab-content li{
+    padding-bottom: 5px;
+    list-style: square;
 }
 
-.tab-content li{
-    border-bottom: 1px solid #b5bd00;
-    padding-bottom: 2px;
-    list-style: none;
+.descripcion{
+    display: flex;
+    flex-direction: column;
 }
 
 .relacionados{
@@ -93,4 +123,11 @@ nav a:hover{
     border: 1px solid #b5bd00;
 }
 
+.info-tecnica a{
+    text-decoration: none;
+    color: black
+}
 
+.info-tecnica a:hover{
+    color: #b5bd00;
+}
