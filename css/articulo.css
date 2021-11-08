@@ -131,3 +131,11 @@ nav a:hover{
 .info-tecnica a:hover{
     color: #b5bd00;
 }
+
+@media (max-width: 1400px) {
+    .tab-content{
+        width: 1100px;
+        height: 360px;
+    }
+    
+}

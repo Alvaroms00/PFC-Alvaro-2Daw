@@ -30,3 +30,9 @@ article > img{
     width: 270px;
     height: 270px;
 }
+
+@media (max-width: 1400px){
+    .productos{
+        gap: 20px;
+    }
+}
