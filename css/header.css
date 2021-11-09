@@ -26,7 +26,6 @@ nav.header{
 .navbar-collapse{
     justify-content: center;
     align-items: center;
-
 }
 
 .navbar-nav{
@@ -51,7 +50,7 @@ footer{
     color: white;
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 40px;
 }
 
 .imagenes{
