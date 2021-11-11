@@ -101,6 +101,25 @@ nav a:hover{
     list-style: square;
 }
 
+.añadir{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+input{
+    background-color: #fbfbfb;
+    width: 37px;
+    height: 38px;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid; 
+    border-width: 1px; 
+}
+
 .descripcion{
     display: flex;
     flex-direction: column;

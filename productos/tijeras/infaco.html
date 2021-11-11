@@ -26,7 +26,7 @@
     </script>
     <script src="/js/subir.js"></script>
     <script src="/js/sidebars.js"></script>
-
+    <script src="/js/cantidad.js"></script>
 </head>
 
 <body>
@@ -218,6 +218,11 @@
                         </p>
                     </div>
                     <div class="info">
+                        <div class="añadir">
+                            <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
+                            <input type='text' id="cantidad" value="1">
+                            <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
+                          </div>
                         <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
                         <a href="" class="btn btn-dark">Añadir al Carrito</a>
                     </div>

@@ -26,6 +26,7 @@
     </script>
   <script src="/js/sidebars.js"></script>
   <script src="/js/subir.js"></script>
+  <script src="/js/cantidad.js"></script>
 </head>
 
 <body>
@@ -143,10 +144,12 @@
                 <li><a href="/productos/electricas/amoladora.html" class="link-dark rounded">Amoladora</a></li>
                 <li><a href="/productos/electricas/atornillador.html" class="link-dark rounded">Atornillador</a></li>
                 <li><a href="/productos/electricas/lijadora.html" class="link-dark rounded">Lijadora</a></li>
-                <li><a href="/productos/electricas/martillolijero.html" class="link-dark rounded">Martillo Ligero</a></li>
+                <li><a href="/productos/electricas/martillolijero.html" class="link-dark rounded">Martillo Ligero</a>
+                </li>
                 <li><a href="/productos/electricas/miniamoladora.html" class="link-dark rounded">Mini Amoladora</a></li>
                 <li><a href="/productos/electricas/sierra.html" class="link-dark rounded">Sierra de Calar</a></li>
-                <li><a href="/productos/electricas/taladrocomb.html" class="link-dark rounded">Taladro Combinado</a></li>
+                <li><a href="/productos/electricas/taladrocomb.html" class="link-dark rounded">Taladro Combinado</a>
+                </li>
                 <li><a href="/productos/electricas/taladroperc.html" class="link-dark rounded">Taladro Percutor</a></li>
               </ul>
             </div>
@@ -209,6 +212,11 @@
             </p>
           </div>
           <div class="info">
+            <div class="añadir">
+              <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
+              <input type='text' id="cantidad" value="1">
+              <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
+            </div>
             <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
             <a href="" class="btn btn-dark">Añadir al Carrito</a>
           </div>
@@ -248,7 +256,8 @@
               <p>Consulte o descargue el PDF para saber la información técnica de este artículo.</p>
               <a href="/productos/ficha tecnica/tijeras/" target="_blank"><i class="far fa-file-pdf"></i>
                 &nbsp; Información del Producto</a> <br>
-              <a href="/productos/ficha tecnica/tijeras/" download=""><i class="fas fa-file-download"></i> &nbsp; Descargar</a>
+              <a href="/productos/ficha tecnica/tijeras/" download=""><i class="fas fa-file-download"></i> &nbsp;
+                Descargar</a>
             </div>
           </div>
 
