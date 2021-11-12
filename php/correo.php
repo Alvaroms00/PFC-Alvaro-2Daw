@@ -29,3 +29,5 @@ if (isset($_POST['enviar'])) {
         echo "Ha habido un error";
     }
 }
+
+?>

@@ -65,7 +65,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="html/nosotros.html">Nosotros</a>
@@ -129,9 +129,9 @@
                     $query = "SELECT nombre, modelo, precio FROM articulos WHERE id = 1";
                     $res = mysqli_query($conexion, $query);
                     $info = mysqli_fetch_array($res);
-                    echo $info['nombre'].'<br>'; 
-                    echo "Modelo: ".$info['modelo']. "<br>";
-                    echo "Precio: ".$info['precio']. "€ <br>";
+                    echo $info['nombre'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
                   <a href="productos/electricas/miniamoladora.html" class="btn btn-dark">Ver Producto</a>

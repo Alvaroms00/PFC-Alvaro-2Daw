@@ -2,16 +2,20 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+  <?php
+    include("../php/conectar_bd.php");
+    include("../php/correo.php");
+  ?>
+  <meta charset="utf-8">
   <title>Ferretería Gabaldón</title>
   <link rel="shorcut icon" href="../imagenestfg/icono.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- css -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/folletos.css">
+  <link rel="stylesheet" href="../css/contacto.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
@@ -19,7 +23,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -34,12 +37,13 @@
     </nav>
 
   </header>
+
   <div class="cabecera">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
+            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="nosotros.html">Nosotros</a>
@@ -56,10 +60,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="folletos.html">Folletos</a>
+            <a class="nav-link" href="folletos.html">Folletos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link active" href="contacto.html">Contacto</a>
           </li>
         </ul>
       </div>
@@ -67,63 +71,55 @@
   </div>
 
   <article>
-    <p><strong>Aquí están nuestras ofertas de temporada</strong></p>
-    <div class="catalogo">
-      <div class="folletos">
-        <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.calefaccion.jpg" class="card-img-top" alt="Folleto calefaccion">
-          <div class="card-body">
-            <a href="../folletos/CALEFACCION_2021_-_FERRYMAS.pdf" target="_blank" class="texto">Folleto Calefacción
-              2021</a>
-            <a href="../folletos/CALEFACCION_2021_-_FERRYMAS.pdf" class="btn btn-dark"
-              download="CALEFACCION_2021_-_FERRYMAS">Descargar</a>
-          </div>
-        </div>
+    <div class="contacto">
+      <div class="formulario">
+        <h1>Formulario de Contacto</h1>
+        <h5>Escribenos para poder contactar contigo y resolver todas las dudas</h5>
 
-        <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.poda.jpg" class="card-img-top" alt="Folleto Poda">
-          <div class="card-body">
-            <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" target="_blank" class="texto">Folleto Poda 2021</a>
-            <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" class="btn btn-dark"
-              download="PODA_2021_-_FERRYMAS">Descargar</a>
-          </div>
-        </div>
+        <form action="" method="POST">
+          <p>
+            <label for="nombre" class="nombre">Nombre
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribre tu nombre" required>
+          </p>
 
-        <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.abrasivos.jpg" class="card-img-top" alt="Catalogo abrasivos">
-          <div class="card-body">
-            <a href="../folletos/101_ABRASIVOS.pdf" target="_blank" class="texto">Catalogo abrasivos 2021</a>
-            <a href="../folletos/101_ABRASIVOS.pdf" class="btn btn-dark" download="101_ABRASIVOS.pdf">Descargar</a>
-          </div>
-        </div>
-      </div>
+          <p>
+            <label for="email" class="email">Email
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="email" name="email" id="email" placeholder="Escribe tu Email" required>
+          </p>
 
-      <div class="folletos">
-        <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.cocina.jpg" class="card-img-top" alt="Catalogo cocina">
-          <div class="card-body">
-            <a href="../folletos/201_ACCESORIOS_COCINA.pdf" target="_blank" class="texto">Catalogo cocina 2021</a>
-            <a href="../folletos/201_ACCESORIOS_COCINA.pdf" class="btn btn-dark"
-              download="201_ACCESORIOS_COCINA.pdf">Descargar</a>
-          </div>
-        </div>
+          <p>
+            <label for="telefone" class="telefono">Teléfono
+            </label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
+          </p>
 
-        <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/PortadaProferGeneral.jpg" class="card-img-top" alt="Catalogo Profer">
-          <div class="card-body">
-            <a href="../folletos/Catálogo PROFER.pdf" target="_blank" class="texto">Catalogo Profer</a>
-            <a href="../folletos/Catálogo PROFER.pdf" class="btn btn-dark" download="Catálogo PROFER.pdf">Descargar</a>
-          </div>
-        </div>
+          <p>
+            <label for="asunto" class="Asunto">Asunto
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="text" name="asunto" id="asunto" placeholder="Escribe un asunto" required>
+          </p>
 
-        <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/profesional.jpg" class="card-img-top" alt="Folleto profesional">
-          <div class="card-body">
-            <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" target="_blank" class="texto">Folleto Profesional Otoño</a>
-            <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" class="btn btn-dark"
-              download="PROFESIONAL_OTOÑO_2021">Descargar</a>
-          </div>
-        </div>
+          <p>
+            <label for="mensaje" class="colocar_mensaje">Mensaje
+              <span class="obligatorio">*</span>
+            </label>
+            <textarea name="mensaje" class="mensaje" id="mensaje" placeholder="Deja aquí tu comentario..."
+              required></textarea>
+          </p>
+
+          <button type="submit" name="enviar" id="enviar">Enviar</button>
+
+          <p class="aviso">
+            <span class="obligatorio"> * </span>los campos son obligatorios.
+          </p>
+
+
+        </form>
       </div>
     </div>
 
