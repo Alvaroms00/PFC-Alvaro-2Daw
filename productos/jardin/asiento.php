@@ -188,7 +188,7 @@
     <div class="articulo">
       <div class="producto">
         <div class="producto-img">
-          <a data-fancybox="single" data-src="../../imagenestfg/tijera1.jpg">
+          <a data-fancybox="single" data-src="../../imagenestfg/asientos.jpg">
             <?php
             $query = "SELECT tipo, imagen FROM imagenes WHERE id = 2";
             $res = mysqli_query($conexion, $query);
