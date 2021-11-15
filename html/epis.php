@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <?php
+<?php
   include("../php/conectar_bd.php");
   ?>
   <meta charset="UTF-8">
@@ -11,16 +11,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- css -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/productos.css">
   <link rel="stylesheet" href="../css/sidebars.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
-  </script>
-  <script src="../js/sidebars.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
 
 </head>
 
@@ -30,12 +32,7 @@
     <nav class="header">
       <div class="logo">
         <a href="../index.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" title="Ferretería Gabaldón">
+          <img src="../imagenestfg/logo ferreteria.jpg" title="Ferretería Gabaldón">
         </a>
       </div>
 
@@ -70,7 +67,8 @@
             <a class="nav-link" href="nosotros.php">Nosotros</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="tijeras.php">Tijeras electricas</a></li>
               <li><a class="dropdown-item" href="manuales.php">Herramientas manuales</a></li>
@@ -98,10 +96,11 @@
         </a>
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#home-collapse" aria-expanded="false">
               Tijeras electricas
             </button>
-            <div class="collapse show" id="home-collapse">
+            <div class="collapse" id="home-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="../productos/tijeras/bahco.php" class="link-dark rounded">Tijera BAHCO</a></li>
                 <li><a href="../productos/tijeras/bellota.php" class="link-dark rounded">Tijera Bellota</a></li>
@@ -111,7 +110,8 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse" aria-expanded="false">
               Herramientas manuales
             </button>
             <div class="collapse" id="dashboard-collapse">
@@ -128,7 +128,8 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#orders-collapse" aria-expanded="false">
               Herramientas Electricas
             </button>
             <div class="collapse" id="orders-collapse">
@@ -145,10 +146,11 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#products-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#products-collapse" aria-expanded="true">
               Epis
             </button>
-            <div class="collapse" id="products-collapse">
+            <div class="collapse show" id="products-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="../productos/epis/casco.php" class="link-dark rounded">Casco Obra</a></li>
                 <li><a href="../productos/epis/chaleco.php" class="link-dark rounded">Chaleco Reflectante</a></li>
@@ -162,7 +164,8 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customers-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#customers-collapse" aria-expanded="false">
               Jardín
             </button>
             <div class="collapse" id="customers-collapse">
@@ -177,119 +180,67 @@
         </ul>
       </div>
     </aside>
-    <p>Aqui esta nuestra selección de las mejores tijeras de podar del mercado</p>
     <div class="productos">
       <div class="caja">
-        <a href="../productos/tijeras/bahco.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 27";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/bahco.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 27 ";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/bahco.php" class="btn btn-light">Ver Producto</a>
+        <a href=""><img src="" alt="" class="img-thumbnail"></a>
+        <p><a href="">Casco de Obra</a> <br>
+          Modelo: <br>
+          Precio: <br>
+          <a href="" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href="../productos/tijeras/bellota.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 28";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/bellota.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 28";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/bellota.php" class="btn btn-light">Ver Producto</a>
+        <a href=""><img src="" alt="" class="img-thumbnail"></a>
+        <p><a href="">Chaleco Reflectante</a> <br>
+          Modelo: <br>
+          Precio: <br>
+          <a href="" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
 
     <div class="productos">
       <div class="caja">
-        <a href="../productos/tijeras/infaco.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 29";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/infaco.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 29";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/infaco.php" class="btn btn-light">Ver Producto</a>
+        <a href=""><img src="" alt="" class="img-thumbnail"></a>
+        <p><a href="">Gafas de Seguridad</a> <br>
+          Modelo: <br>
+          Precio: <br>
+          <a href="" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href="../productos/tijeras/makita.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 30";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/makita.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 30";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/makita.php" class="btn btn-light">Ver Producto</a>
+        <a href=""><img src="" alt="" class="img-thumbnail"></a>
+        <p><a href="">Guantes Protectores</a> <br>
+          Modelo: <br>
+          Precio: <br>
+          <a href="" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link link-dark" href="epis-2.php" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item active"><a class="page-link link-dark" href="epis.php">1</a></li>
+        <li class="page-item"><a class="page-link link-dark" href="epis-2.php">2</a></li>
+        <li class="page-item">
+          <a class="page-link link-dark" href="epis-2.php" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </article>
 
   <footer>
     <div class="imagenes">
-      <?php
-      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
-      $res = mysqli_query($conexion, $query);
-      $imagen = mysqli_fetch_assoc($res);
-      ?>
-      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
-      <a href="http://www.coferdroza.es/" target="_blank">
-        <?php
-        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
-        $res = mysqli_query($conexion, $query);
-        $imagen = mysqli_fetch_assoc($res);
-        ?>
-        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
+      <img src="../imagenestfg/comercio-excelente.jpg">
+      <a href="http://www.coferdroza.es/" target="_blank"><img src="../imagenestfg/COFERDROZA-logo.png"></a>
     </div>
 
     <div class="d-flex" style="height: 200px;">
@@ -312,15 +263,12 @@
     <div class="ubicacion">
       <p><strong>Donde Encontrarnos</strong></p>
       <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
-        <?php
-        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
-        $res = mysqli_query($conexion, $query);
-        $imagen = mysqli_fetch_assoc($res);
-        ?>
-        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
+      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934"
+        target="_blank"><img src="../imagenestfg/ubicacion.png"
+          alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
     </div>
   </footer>
+  <script src="../js/sidebars.js"></script>
 </body>
 
 </html>
