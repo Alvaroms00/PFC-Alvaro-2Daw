@@ -32,7 +32,12 @@
     <nav class="header">
       <div class="logo">
         <a href="../index.php">
-          <img src="../imagenestfg/logo ferreteria.jpg" title="Ferretería Gabaldón">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" title="Ferretería Gabaldón">
         </a>
       </div>
 
@@ -182,48 +187,96 @@
     </aside>
     <p>Decora tu jardín con esta selección de artículos</p>
     <div class="productos">
-      <div class="caja">
-        <a href="../productos/jardin/asiento.php"><img src="../imagenestfg/asientos.jpg" alt="Conjunto Asientos"
-            class="img-thumbnail"></a>
-        <p>
-          <a href="../productos/jardin/asiento.php">Conjunto Asiento 4 Piezas</a> <br>
-          Modelo: C2-0168 <br>
-          Precio: 805,71 € <br>
+    <div class="caja">
+        <a href="../productos/jardin/asiento.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 2";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/jardin/asiento.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 2";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/jardin/asiento.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href="../productos/jardin/banco.php"><img src="../imagenestfg/banco.jpg" alt="Banco Madera"
-            class="img-thumbnail"></a>
-        <p>
-          <a href="../productos/jardin/banco.php">Banco Madera Jardín</a> <br>
-          Modelo: PROFER <br>
-          Precio: 67,59 € <br>
+        <a href="../productos/jardin/banco.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 5";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/jardin/banco.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 5";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Tamaño: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/jardin/banco.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
 
     <div class="productos">
-      <div class="caja">
-        <a href="../productos/jardin/cenador.php"><img src="../imagenestfg/caseta.jpg" alt="Cenador"
-            class="img-thumbnail"></a>
-        <p>
-          <a href="../productos/jardin/cenador.php">Cenador Acero Inoxidable 3x3MTS</a> <br>
-          Modelo: PROFER <br>
-          Precio: 352,85 € <br>
+    <div class="caja">
+        <a href="../productos/jardin/cenador.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 7";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/jardin/cenador.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 7";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Tamaño: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/jardin/cenador.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
       
       <div class="caja">
-        <a href="../productos/jardin/mesa-plegable.php"><img src="../imagenestfg/mesa-plegable.jpg" alt="Mesa Plegable"
-            class="img-thumbnail"></a>
-        <p>
-          <a href="../productos/jardin/mesa-plegable.php">Mesa Plegable Jardín</a> <br>
-          Modelo: TY540 <br>
-          Precio: 63,86 € <br>
+        <a href="../productos/jardin/mesa-plegable.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 20";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/jardin/mesa-plegable.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 20";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/jardin/mesa-plegable.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
@@ -232,8 +285,19 @@
 
   <footer>
     <div class="imagenes">
-      <img src="../imagenestfg/comercio-excelente.jpg">
-      <a href="http://www.coferdroza.es/" target="_blank"><img src="../imagenestfg/COFERDROZA-logo.png"></a>
+      <?php
+      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
+      $res = mysqli_query($conexion, $query);
+      $imagen = mysqli_fetch_assoc($res);
+      ?>
+      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
+      <a href="http://www.coferdroza.es/" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
     </div>
 
     <div class="d-flex" style="height: 200px;">
@@ -256,9 +320,13 @@
     <div class="ubicacion">
       <p><strong>Donde Encontrarnos</strong></p>
       <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934"
-        target="_blank"><img src="../imagenestfg/ubicacion.png"
-          alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
+      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
     </div>
   </footer>
 </body>

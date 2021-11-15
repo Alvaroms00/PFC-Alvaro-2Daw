@@ -32,7 +32,12 @@
     <nav class="header">
       <div class="logo">
         <a href="../index.php">
-          <img src="../imagenestfg/logo ferreteria.jpg" title="Ferretería Gabaldón">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" title="Ferretería Gabaldón">
         </a>
       </div>
 
@@ -181,41 +186,97 @@
       </div>
     </aside>
     <div class="productos">
-      <div class="caja">
-        <a href=""><img src="" alt="" class="img-thumbnail"></a>
-        <p><a href="">Casco de Obra</a> <br>
-          Modelo: <br>
-          Precio: <br>
-          <a href="" class="btn btn-light">Ver Producto</a>
+    <div class="caja">
+        <a href="../productos/epis/casco.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 6";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/epis/casco.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 6";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+          <a href="../productos/epis/casco.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href=""><img src="" alt="" class="img-thumbnail"></a>
-        <p><a href="">Chaleco Reflectante</a> <br>
-          Modelo: <br>
-          Precio: <br>
-          <a href="" class="btn btn-light">Ver Producto</a>
+        <a href="../productos/epis/chaleco.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 8";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/epis/chaleco.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 8";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+          <a href="../productos/epis/chaleco.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
 
     <div class="productos">
-      <div class="caja">
-        <a href=""><img src="" alt="" class="img-thumbnail"></a>
-        <p><a href="">Gafas de Seguridad</a> <br>
-          Modelo: <br>
-          Precio: <br>
-          <a href="" class="btn btn-light">Ver Producto</a>
+    <div class="caja">
+        <a href="../productos/epis/gafas.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 10";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/epis/gafas.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 10";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+          <a href="../productos/epis/gafas.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href=""><img src="" alt="" class="img-thumbnail"></a>
-        <p><a href="">Guantes Protectores</a> <br>
-          Modelo: <br>
-          Precio: <br>
-          <a href="" class="btn btn-light">Ver Producto</a>
+        <a href="../productos/epis/guantes.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 11";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/epis/guantes.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 11";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+          <a href="../productos/epis/guantes.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
@@ -239,8 +300,19 @@
 
   <footer>
     <div class="imagenes">
-      <img src="../imagenestfg/comercio-excelente.jpg">
-      <a href="http://www.coferdroza.es/" target="_blank"><img src="../imagenestfg/COFERDROZA-logo.png"></a>
+      <?php
+      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
+      $res = mysqli_query($conexion, $query);
+      $imagen = mysqli_fetch_assoc($res);
+      ?>
+      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
+      <a href="http://www.coferdroza.es/" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
     </div>
 
     <div class="d-flex" style="height: 200px;">
@@ -263,9 +335,13 @@
     <div class="ubicacion">
       <p><strong>Donde Encontrarnos</strong></p>
       <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934"
-        target="_blank"><img src="../imagenestfg/ubicacion.png"
-          alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
+      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
     </div>
   </footer>
   <script src="../js/sidebars.js"></script>

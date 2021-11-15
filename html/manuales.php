@@ -189,16 +189,16 @@
 
     <div class="productos">
     <div class="caja">
-        <a href="../productos/">
+        <a href="../productos/manuales/azada.php">
         <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = ";
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 4";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/">
+        <p><a href="../productos/manuales/azada.php">
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = ";
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 4";
                     $res = mysqli_query($conexion, $query);
                     $info = mysqli_fetch_array($res);
                     echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
@@ -207,46 +207,46 @@
                     echo "Modelo: " . $info['modelo'] . "<br>";
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
-          <a href="../productos/" class="btn btn-light">Ver Producto</a>
+          <a href="../productos/manuales/azada.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href="../productos/">
+        <a href="../productos/manuales/destornillador.php">
         <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = ";
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 9";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/">
+        <p><a href="../productos/manuales/destornillador.php">
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = ";
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 9";
                     $res = mysqli_query($conexion, $query);
                     $info = mysqli_fetch_array($res);
                     echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
                     ?></a>
                     <?php
-                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Tamaño: " . $info['modelo'] . "<br>";
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
-          <a href="../productos/" class="btn btn-light">Ver Producto</a>
+          <a href="../productos/manuales/destornillador.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
 
     <div class="productos">
     <div class="caja">
-        <a href="../productos/">
+        <a href="../productos/manuales/hacha.php">
         <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = ";
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 12";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/">
+        <p><a href="../productos/manuales/hacha.php">
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = ";
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 12";
                     $res = mysqli_query($conexion, $query);
                     $info = mysqli_fetch_array($res);
                     echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
@@ -255,21 +255,21 @@
                     echo "Modelo: " . $info['modelo'] . "<br>";
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
-          <a href="../productos/" class="btn btn-light">Ver Producto</a>
+          <a href="../productos/manuales/hacha.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href="../productos/">
+        <a href="../productos/manuales/horca.php">
         <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = ";
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 13";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/">
+        <p><a href="../productos/manuales/horca.php">
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = ";
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 13";
                     $res = mysqli_query($conexion, $query);
                     $info = mysqli_fetch_array($res);
                     echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
@@ -278,7 +278,7 @@
                     echo "Modelo: " . $info['modelo'] . "<br>";
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
-          <a href="../productos/" class="btn btn-light">Ver Producto</a>
+          <a href="../productos/manuales/horca.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>

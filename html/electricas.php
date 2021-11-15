@@ -32,7 +32,12 @@
     <nav class="header">
       <div class="logo">
         <a href="../index.php">
-          <img src="../imagenestfg/logo ferreteria.jpg" title="Ferretería Gabaldón">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" title="Ferretería Gabaldón">
         </a>
       </div>
 
@@ -181,42 +186,99 @@
       </div>
     </aside>
     <div class="productos">
-      <div class="caja">
-        <a href="../productos/electricas/amoladora.php"><img src="../imagenestfg/amoladora2.jpg" alt="amoladora" class="img-thumbnail"></a>
-        <p><a href="../productos/electricas/amoladora.php">Amoladora Makita</a> <br>
-          Modelo: GA9020R <br>
-          Precio: 162,50 €<br>
+    <div class="caja">
+        <a href="../productos/electricas/amoladora.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 1";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/electricas/amoladora.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 1";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/electricas/amoladora.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
-        <a href="../productos/electricas/atornillador.php"><img src="../imagenestfg/atornillador.jpg" alt="" class="img-thumbnail"></a>
-        <p><a href="../productos/electricas/atornillador.php">Atornillador de Impacto Makita</a> <br>
-          Modelo: DTD156Z <br>
-          Precio: 119,30 € <br>
+        <a href="../productos/electricas/atornillador.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 3";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/electricas/atornillador.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 3";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/electricas/atornillador.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
 
     <div class="productos">
-      <div class="caja">
-        <a href="../productos/electricas/lijadora.php"><img src="../imagenestfg/lijadora.jpg" alt="lijadora" class="img-thumbnail"></a>
-        <p><a href="../productos/electricas/lijadora.php">Lijadora Makita</a> <br>
-          Modelo: BO5041 <br>
-          Precio: 183,17 €<br>
+    <div class="caja">
+        <a href="../productos/electricas/lijadora.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 14";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/electricas/lijadora.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 14";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/electricas/lijadora.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
+
       <div class="caja">
-        <a href="../productos/electricas/martilloligero.php"><img src="../imagenestfg/taladro2.jpg" alt="" class="img-thumbnail"></a>
-        <p><a href="../productos/electricas/martilloligero.php">Martillo ligero Makita</a> <br>
-          Modelo: HR2470 <br>
-          Precio: 213,92 €<br>
+        <a href="../productos/electricas/martilloligero.php">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 17";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
+        <p><a href="../productos/electricas/martilloligero.php">
+          <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 17";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
+                    ?></a>
+                    <?php
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
           <a href="../productos/electricas/martilloligero.php" class="btn btn-light">Ver Producto</a>
         </p>
-      </div>   
+      </div>
     </div>
 
     <nav aria-label="Page navigation example">
@@ -240,8 +302,19 @@
 
   <footer>
     <div class="imagenes">
-      <img src="../imagenestfg/comercio-excelente.jpg">
-      <a href="http://www.coferdroza.es/" target="_blank"><img src="../imagenestfg/COFERDROZA-logo.png"></a>
+      <?php
+      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
+      $res = mysqli_query($conexion, $query);
+      $imagen = mysqli_fetch_assoc($res);
+      ?>
+      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
+      <a href="http://www.coferdroza.es/" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
     </div>
 
     <div class="d-flex" style="height: 200px;">
@@ -264,9 +337,13 @@
     <div class="ubicacion">
       <p><strong>Donde Encontrarnos</strong></p>
       <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934"
-        target="_blank"><img src="../imagenestfg/ubicacion.png"
-          alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
+      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
     </div>
   </footer>
   <script src="../js/sidebars.js"></script>
