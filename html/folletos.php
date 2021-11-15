@@ -2,6 +2,9 @@
 <html lang="es">
 
 <head>
+<?php
+  include("../php/conectar_bd.php");
+  ?>
   <meta charset="UTF-8">
   <title>Ferretería Gabaldón</title>
   <link rel="shorcut icon" href="../imagenestfg/icono.png">
@@ -42,24 +45,24 @@
             <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="nosotros.html">Nosotros</a>
+            <a class="nav-link" href="nosotros.php">Nosotros</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="tijeras.html">Tijeras electricas</a></li>
-              <li><a class="dropdown-item" href="manuales.html">Herramientas manuales</a></li>
-              <li><a class="dropdown-item" href="electricas.html">Herraminetas electricas</a></li>
-              <li><a class="dropdown-item" href="epis.html">Epis</a></li>
-              <li><a class="dropdown-item" href="jardin.html">Jardín</a></li>
+              <li><a class="dropdown-item" href="tijeras.php">Tijeras electricas</a></li>
+              <li><a class="dropdown-item" href="manuales.php">Herramientas manuales</a></li>
+              <li><a class="dropdown-item" href="electricas.php">Herraminetas electricas</a></li>
+              <li><a class="dropdown-item" href="epis.php">Epis</a></li>
+              <li><a class="dropdown-item" href="jardin.php">Jardín</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="folletos.html">Folletos</a>
+            <a class="nav-link active" href="folletos.php">Folletos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.php">Contacto</a>
           </li>
         </ul>
       </div>
@@ -71,7 +74,12 @@
     <div class="catalogo">
       <div class="folletos">
         <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.calefaccion.jpg" class="card-img-top" alt="Folleto calefaccion">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 34";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto calefaccion">
           <div class="card-body">
             <a href="../folletos/CALEFACCION_2021_-_FERRYMAS.pdf" target="_blank" class="texto">Folleto Calefacción
               2021</a>
@@ -81,7 +89,12 @@
         </div>
 
         <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.poda.jpg" class="card-img-top" alt="Folleto Poda">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 36";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto Poda">
           <div class="card-body">
             <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" target="_blank" class="texto">Folleto Poda 2021</a>
             <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" class="btn btn-dark"
@@ -90,7 +103,12 @@
         </div>
 
         <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.abrasivos.jpg" class="card-img-top" alt="Catalogo abrasivos">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 33";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Catalogo abrasivos">
           <div class="card-body">
             <a href="../folletos/101_ABRASIVOS.pdf" target="_blank" class="texto">Catalogo abrasivos 2021</a>
             <a href="../folletos/101_ABRASIVOS.pdf" class="btn btn-dark" download="101_ABRASIVOS.pdf">Descargar</a>
@@ -100,7 +118,12 @@
 
       <div class="folletos">
         <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/cat.cocina.jpg" class="card-img-top" alt="Catalogo cocina">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 35";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Catalogo cocina">
           <div class="card-body">
             <a href="../folletos/201_ACCESORIOS_COCINA.pdf" target="_blank" class="texto">Catalogo cocina 2021</a>
             <a href="../folletos/201_ACCESORIOS_COCINA.pdf" class="btn btn-dark"
@@ -109,7 +132,12 @@
         </div>
 
         <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/PortadaProferGeneral.jpg" class="card-img-top" alt="Catalogo Profer">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 37";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Catalogo Profer">
           <div class="card-body">
             <a href="../folletos/Catálogo PROFER.pdf" target="_blank" class="texto">Catalogo Profer</a>
             <a href="../folletos/Catálogo PROFER.pdf" class="btn btn-dark" download="Catálogo PROFER.pdf">Descargar</a>
@@ -117,7 +145,12 @@
         </div>
 
         <div class="card" style="width: 15em;">
-          <img src="../imagenestfg/profesional.jpg" class="card-img-top" alt="Folleto profesional">
+        <?php
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 38";
+          $res = mysqli_query($conexion, $query);
+          $imagen = mysqli_fetch_assoc($res);
+          ?>
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
           <div class="card-body">
             <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" target="_blank" class="texto">Folleto Profesional Otoño</a>
             <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" class="btn btn-dark"
@@ -131,8 +164,19 @@
 
   <footer>
     <div class="imagenes">
-      <img src="../imagenestfg/comercio-excelente.jpg">
-      <a href="http://www.coferdroza.es/" target="_blank"><img src="../imagenestfg/COFERDROZA-logo.png"></a>
+      <?php
+      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
+      $res = mysqli_query($conexion, $query);
+      $imagen = mysqli_fetch_assoc($res);
+      ?>
+      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
+      <a href="http://www.coferdroza.es/" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
     </div>
 
     <div class="d-flex" style="height: 200px;">
@@ -155,9 +199,13 @@
     <div class="ubicacion">
       <p><strong>Donde Encontrarnos</strong></p>
       <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934"
-        target="_blank"><img src="../imagenestfg/ubicacion.png"
-          alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
+      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
     </div>
   </footer>
 </body>
