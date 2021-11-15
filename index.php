@@ -32,7 +32,7 @@
       <div class="logo">
         <a href="index.php">
           <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 2";
+          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
@@ -93,7 +93,7 @@
 
   <article>
     <?php
-    $query = "SELECT tipo, imagen FROM imagenes WHERE id = 3";
+    $query = "SELECT tipo, imagen FROM imagenes WHERE id = 40";
     $res = mysqli_query($conexion, $query);
     $imagen = mysqli_fetch_assoc($res);
     ?>
@@ -106,12 +106,85 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="productos">
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/amoladora2.jpg" class="card-img-top" alt="amoladora">
+
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 1";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Amoladora</h5>
-                  <p class="card-text">Amoladora Makita 230MM 2.2000W <br> Modelo: GA9020R <br> Precio 162,50 €</p>
-                  <a href="productos/electricas/amoladora.html" class="btn btn-dark">Ver Producto</a>
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 1";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 3";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 3";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 21";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 21";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -123,37 +196,22 @@
                 ?>
                 <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Mini Amoladora</h5>
-                  <p class="card-text">
+                  <h5 class="card-title">
                     <?php
-                    $query = "SELECT nombre, modelo, precio FROM articulos WHERE id = 1";
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 24";
                     $res = mysqli_query($conexion, $query);
                     $info = mysqli_fetch_array($res);
-                    echo $info['nombre'] . '<br>';
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
                     echo "Modelo: " . $info['modelo'] . "<br>";
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/miniamoladora.html" class="btn btn-dark">Ver Producto</a>
-                </div>
-              </div>
-
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/taladro.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Taladro Combinado</h5>
-                  <p class="card-text">Taladro Combinado Makita 18V LXT <br> Modelo: DHP482RME18 <br> Precio 174,85 €
-                  </p>
-                  <a href="productos/electricas/taladrocomb.html" class="btn btn-dark">Ver Producto</a>
-                </div>
-              </div>
-
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/taladro2.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Taladro Percutor</h5>
-                  <p class="card-text">Taladro Percutor Makita 720W 13mm <br> Modelo: HP2050 <br> Precio 413,57 €</p>
-                  <a href="productos/electricas/taladroperc.html" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
             </div>
@@ -161,41 +219,112 @@
 
           <div class="carousel-item">
             <div class="productos">
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/tijera1.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Tijera</h5>
-                  <p class="card-text">Tijera Electrica Recargable BAHCO <br>Modelo: BCL22 <br> Precio 1.361,25 €</p>
-                  <a href="productos/tijeras/bahco.html" class="btn btn-dark">Ver Producto</a>
-                </div>
-              </div>
 
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/tijera2.jpg" class="card-img-top" alt="">
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 27";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Tijera</h5>
-                  <p class="card-text">Tijera Electrica Bellota Recargable <br>Modelo: EPR137P <br>Precio 789,90 €
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 27 ";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
                   </p>
-                  <a href="productos/tijeras/bellota.html" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/tijera.jpg" class="card-img-top" alt="">
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 28";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Tijera</h5>
-                  <p class="card-text">Tijera Electrica Electrocoup Infaco<br>Modelo: F3015 <br>Precio 1.660,94 €</p>
-                  <a href="productos/tijeras/infaco.html" class="btn btn-dark">Ver Producto</a>
-                </div>
-              </div>
-
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/tijera3.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">Tijera</h5>
-                  <p class="card-text">Tijera Poda Electrica Makita Recargable <br>Modelo: DUP361P <br>Precio 1.252,35 €
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 28";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
                   </p>
-                  <a href="productos/tijeras/makita.html" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 29";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 29";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 30";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 30 ";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
             </div>
@@ -203,39 +332,112 @@
 
           <div class="carousel-item">
             <div class="productos">
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/asientos.jpg" class="card-img-top" alt="">
+
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 2";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Asientos</h5>
-                  <p class="card-text">Conjunto Asientos 4 Piezas Marron <br> Modelo: C2-0168 <br>Precio 805,71 € </p>
-                  <a href="productos/jardin/asiento.html" class="btn btn-dark">Ver Producto</a>
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 2";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/banco.jpg" class="card-img-top" alt="">
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 5";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Banco</h5>
-                  <p class="card-text">Banco Jardín Madera 122x62x81 Ctms<br>Modelo: PROFER <br>Precio 67,59 € </p>
-                  <a href="productos/jardin/banco.html" class="btn btn-dark">Ver Producto</a>
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 5";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Tamaño: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/caseta.jpg" class="card-img-top" alt="">
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 7";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Cenador</h5>
-                  <p class="card-text">Cenador Acero Inoxidable 3x3MTS <br>Modelo: PROFER <br>Precio: 352,85 € </p>
-                  <a href="productos/jardin/cenador.html" class="btn btn-dark">Ver Producto</a>
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 7";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Tamaño: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
-              <div class="card" style="width: 15rem;">
-                <img src="imagenestfg/mesa-plegable.jpg" class="card-img-top" alt="mesa plegable">
+              <div class="card" style="width: 15em;">
+                <?php
+                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 20";
+                $res = mysqli_query($conexion, $query);
+                $imagen = mysqli_fetch_assoc($res);
+                ?>
+                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
                 <div class="card-body">
-                  <h5 class="card-title">Mesa Plegable</h5>
-                  <p class="card-text">Mesa Plegable Jardín 182x70 Ctms <br> Modelo: TY540 <br> Precio 63,86 €</p>
-                  <a href="productos/jardin/mesa-plegable.html" class="btn btn-dark">Ver Producto</a>
+                  <h5 class="card-title">
+                    <?php
+                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 20";
+                    $res = mysqli_query($conexion, $query);
+                    $info = mysqli_fetch_array($res);
+                    echo $info['nombre'];
+                    ?>
+                  </h5>
+                  <p class="card-text">
+                    <?php
+                    echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                    echo "Modelo: " . $info['modelo'] . "<br>";
+                    echo "Precio: " . $info['precio'] . "€ <br>";
+                    ?>
+                  </p>
+                  <a href="productos/electricas/.html" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
             </div>
@@ -255,8 +457,19 @@
 
   <footer>
     <div class="imagenes">
-      <img src="imagenestfg/comercio-excelente.jpg">
-      <a href="http://www.coferdroza.es/" target="_blank"><img src="imagenestfg/COFERDROZA-logo.png"></a>
+      <?php
+      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
+      $res = mysqli_query($conexion, $query);
+      $imagen = mysqli_fetch_assoc($res);
+      ?>
+      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
+      <a href="http://www.coferdroza.es/" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
     </div>
 
     <div class="d-flex" style="height: 200px;">
@@ -279,7 +492,13 @@
     <div class="ubicacion">
       <p><strong>Donde Encontrarnos</strong></p>
       <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank"><img src="imagenestfg/ubicacion.png" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
+      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
+        <?php
+        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
+        $res = mysqli_query($conexion, $query);
+        $imagen = mysqli_fetch_assoc($res);
+        ?>
+        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
     </div>
   </footer>
 

@@ -82,3 +82,18 @@ article > p{
         height: 170px;
     }
 }
+
+@media (max-width: 1200px){
+    .productos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    aside{
+        width: 298px;
+        height: 800px;
+    }
+}
