@@ -209,7 +209,7 @@
                         $res = mysqli_query($conexion, $query);
                         $imagen = mysqli_fetch_assoc($res);
                         ?>
-                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Tijera Bahco">
+                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Martillo">
                     </a>
                 </div>
                 <!-- Producto -->
@@ -267,7 +267,10 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <p><strong>Beneficios del Usuario</strong></p>
                         <ul>
-
+                            <li> Cabeza de acero forjado de máxima calidad con temple y durezas homogéneas, controladas en las zonas de golpeo </li>
+                            <li> Perfecta unión cabeza mango con cuña de fibra de vidrio patentada </li>
+                            <li> Fiabilidad y seguridad en el uso </li>
+                            <li> Mango de madera de haya, ideal para herramientas de golpeo </li>
                         </ul>
                     </div>
 
@@ -275,9 +278,9 @@
                         <p><strong>Información Técnica</strong></p>
                         <div class="info-tecnica">
                             <p>Consulte o descargue el PDF para saber la información técnica de este artículo.</p>
-                            <a href="../ficha tecnica/electricas/.pdf" target="_blank"><i class="far fa-file-pdf"></i>
+                            <a href="../ficha tecnica/manuales/" target="_blank"><i class="far fa-file-pdf"></i>
                                 &nbsp; Información del Producto</a> <br>
-                            <a href="../ficha tecnica/electricas/.pdf" download=""><i class="fas fa-file-download"></i>
+                            <a href="../ficha tecnica/manuales/" download=""><i class="fas fa-file-download"></i>
                                 &nbsp; Descargar</a>
                         </div>
                     </div>
@@ -290,7 +293,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="destornillador">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -307,7 +310,7 @@
                                         echo "Precio: " . $info['precio'] . "€ <br>";
                                         ?>
                                     </p>
-                                    <a href="pala.php" class="btn btn-dark">Ver Producto</a>
+                                    <a href="destornillador.php" class="btn btn-dark">Ver Producto</a>
                                 </div>
                             </div>
 
@@ -317,7 +320,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="horca">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -344,7 +347,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="pala">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php

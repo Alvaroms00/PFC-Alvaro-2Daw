@@ -197,7 +197,7 @@
                         $res = mysqli_query($conexion, $query);
                         $imagen = mysqli_fetch_assoc($res);
                         ?>
-                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Tijera Bahco">
+                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="taladro percutor">
                     </a>
                 </div>
                 <!-- Producto -->
@@ -308,7 +308,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="mini amoladora">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -335,7 +335,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="taladro combinado">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -352,7 +352,7 @@
                                         echo "Precio: " . $info['precio'] . "€ <br>";
                                         ?>
                                     </p>
-                                    <a href="taladroperc.php" class="btn btn-dark">Ver Producto</a>
+                                    <a href="taladrocomb.php" class="btn btn-dark">Ver Producto</a>
                                 </div>
                             </div>
                         </div>

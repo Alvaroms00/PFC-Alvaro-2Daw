@@ -204,13 +204,13 @@
         <div class="articulo">
             <div class="producto">
                 <div class="producto-img">
-                    <a data-fancybox="single" data-src="../../imagenestfg/.jpg">
+                    <a data-fancybox="single" data-src="../../imagenestfg/llavefija.jpg">
                         <?php
                         $query = "SELECT tipo, imagen FROM imagenes WHERE id = 15";
                         $res = mysqli_query($conexion, $query);
                         $imagen = mysqli_fetch_assoc($res);
                         ?>
-                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Tijera Bahco">
+                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Llave Fija">
                     </a>
                 </div>
                 <!-- Producto -->
@@ -268,7 +268,12 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <p><strong>Beneficios del Usuario</strong></p>
                         <ul>
-
+                            <li>Diseño en forma de U patentado</li>
+                            <li>Mejor accesibilidad gracias a una cabeza más delgada con bocas anguladas de 15°</li>
+                            <li>Marcado unidireccional más grande que facilita la identificación</li>
+                            <li>Acabado micromate cromado para una superficie de gran calidad</li>
+                            <li>Acero aleado de alto rendimiento</li>
+                            <li>Menos desgaste del fijador gracias a la amplia superficie de contacto de la boca</li>
                         </ul>
                     </div>
 
@@ -276,9 +281,9 @@
                         <p><strong>Información Técnica</strong></p>
                         <div class="info-tecnica">
                             <p>Consulte o descargue el PDF para saber la información técnica de este artículo.</p>
-                            <a href="../ficha tecnica/electricas/.pdf" target="_blank"><i class="far fa-file-pdf"></i>
+                            <a href="../ficha tecnica/manuales/llavefija.pdf" target="_blank"><i class="far fa-file-pdf"></i>
                                 &nbsp; Información del Producto</a> <br>
-                            <a href="../ficha tecnica/electricas/.pdf" download=""><i class="fas fa-file-download"></i>
+                            <a href="../ficha tecnica/manuales/llavefija.pdf" download=""><i class="fas fa-file-download"></i>
                                 &nbsp; Descargar</a>
                         </div>
                     </div>
@@ -291,7 +296,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="azada">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -318,7 +323,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="destornillador">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -345,7 +350,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="tijera poda">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php

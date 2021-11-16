@@ -268,7 +268,11 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <p><strong>Beneficios del Usuario</strong></p>
                         <ul>
-
+                            <li>Hoja pulida para profesionales que garantiza el más alto rendimiento.</li>
+                            <li>Cabezal de corte estrecho para llegar a cualquier parte de forma fácil y rápida, con cortes precisos.</li>
+                            <li>Mangos de aluminio ligeros con hojas y contrahojas ensambladas en los mismos para facilitar el mantenimiento.</li>
+                            <li>Amortiguadores de impactos de goma que reducen el cansancio y aumentan la comodidad.</li>
+                            <li>Tijeras de podar ligeras diseñadas para cortar madera blanda o verde, especialmente en viñedos y huertos.</li>
                         </ul>
                     </div>
 
@@ -276,9 +280,9 @@
                         <p><strong>Información Técnica</strong></p>
                         <div class="info-tecnica">
                             <p>Consulte o descargue el PDF para saber la información técnica de este artículo.</p>
-                            <a href="../ficha tecnica/electricas/.pdf" target="_blank"><i class="far fa-file-pdf"></i>
+                            <a href="../ficha tecnica/manuales/tijerapoda.pdf" target="_blank"><i class="far fa-file-pdf"></i>
                                 &nbsp; Información del Producto</a> <br>
-                            <a href="../ficha tecnica/electricas/.pdf" download=""><i class="fas fa-file-download"></i>
+                            <a href="../ficha tecnica/manuales/tijerapoda.pdf" download=""><i class="fas fa-file-download"></i>
                                 &nbsp; Descargar</a>
                         </div>
                     </div>
@@ -291,7 +295,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="azada">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -318,7 +322,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="martillo">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -345,7 +349,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="pala">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php

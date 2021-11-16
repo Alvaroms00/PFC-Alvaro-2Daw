@@ -99,7 +99,7 @@
                 <li class="breadcrumb-item"><a href="../../index.php"><i class="fas fa-home"></i></a></li>
                 <li class="breadcrumb-item"><a href="">Productos</a></li>
                 <li class="breadcrumb-item"><a href="../../html/tijeras.php">Tijeras Eléctricas</a></li>
-                <li class="breadcrumb-item active" aria-current="page">tijera Makita</li>
+                <li class="breadcrumb-item active" aria-current="page">Tijera Makita</li>
             </ol>
         </nav>
         <!-- Pricipio aside -->
@@ -207,7 +207,7 @@
                         $res = mysqli_query($conexion, $query);
                         $imagen = mysqli_fetch_assoc($res);
                         ?>
-                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Tijera Bahco">
+                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="Tijera Makita">
                     </a>
                 </div>
                 <!-- Producto -->
@@ -291,7 +291,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="tijera bahco">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -318,7 +318,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="tijera bellota">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
@@ -345,7 +345,7 @@
                                 $res = mysqli_query($conexion, $query);
                                 $imagen = mysqli_fetch_assoc($res);
                                 ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="amoladora">
+                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="tijera infaco">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <?php
