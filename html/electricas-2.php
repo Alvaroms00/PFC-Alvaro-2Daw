@@ -295,7 +295,8 @@
       </div>
     </div>
 
-      <ul class="pagination">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
         <li class="page-item">
           <a class="page-link link-dark" href="electricas.php" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
@@ -309,7 +310,7 @@
           </a>
         </li>
       </ul>
-
+    </nav>
   </article>
 
   <footer>
