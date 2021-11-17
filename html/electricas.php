@@ -185,6 +185,19 @@
         </ul>
       </div>
     </aside>
+
+    <form action="POST">
+      <select name="id" class="btn btn-white">
+        <option value="1">Orden alfabético (A-Z)</option>
+        <option value="2">Orden alfabético inverso (Z-A)</option>
+        <option value="3">Precio más bajo a más alto</option>
+        <option value="4">Precio más alto a más bajo</option>
+      </select>
+      <button type="submit" class="btn btn-dark">Aplicar</button>
+    </form>
+
+    <p>Una selección de herramientas para tu taller</p>
+    
     <div class="productos">
     <div class="caja">
         <a href="../productos/electricas/amoladora.php">

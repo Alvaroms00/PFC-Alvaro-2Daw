@@ -23,6 +23,15 @@ article > p{
     font-size: 22px;
 }
 
+form{
+    right: 0px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .caja{
     background-color: rgba(0, 0, 0, .25);
     border: 1px solid rgba(222, 222, 222, .25);

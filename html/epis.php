@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<?php
+  <?php
   include("../php/conectar_bd.php");
   ?>
   <meta charset="UTF-8">
@@ -11,18 +11,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- css -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/productos.css">
   <link rel="stylesheet" href="../css/sidebars.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 </head>
 
@@ -32,7 +28,7 @@
     <nav class="header">
       <div class="logo">
         <a href="../index.php">
-        <?php
+          <?php
           $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
@@ -72,8 +68,7 @@
             <a class="nav-link" href="nosotros.php">Nosotros</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="tijeras.php">Tijeras electricas</a></li>
               <li><a class="dropdown-item" href="manuales.php">Herramientas manuales</a></li>
@@ -101,8 +96,7 @@
         </a>
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#home-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
               Tijeras electricas
             </button>
             <div class="collapse" id="home-collapse">
@@ -115,8 +109,7 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#dashboard-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
               Herramientas manuales
             </button>
             <div class="collapse" id="dashboard-collapse">
@@ -133,8 +126,7 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#orders-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
               Herramientas Electricas
             </button>
             <div class="collapse" id="orders-collapse">
@@ -151,8 +143,7 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#products-collapse" aria-expanded="true">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#products-collapse" aria-expanded="true">
               Epis
             </button>
             <div class="collapse show" id="products-collapse">
@@ -169,8 +160,7 @@
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#customers-collapse" aria-expanded="false">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customers-collapse" aria-expanded="false">
               Jardín
             </button>
             <div class="collapse" id="customers-collapse">
@@ -185,97 +175,110 @@
         </ul>
       </div>
     </aside>
+
+    <form action="POST">
+      <select name="id" class="btn btn-white">
+        <option value="1">Orden alfabético (A-Z)</option>
+        <option value="2">Orden alfabético inverso (Z-A)</option>
+        <option value="3">Precio más bajo a más alto</option>
+        <option value="4">Precio más alto a más bajo</option>
+      </select>
+      <button type="submit" class="btn btn-dark">Aplicar</button>
+    </form>
+
+    <p>Protegete con estos nuestros equipos de más alta calidad</p>
+
     <div class="productos">
-    <div class="caja">
+      <div class="caja">
         <a href="../productos/epis/casco.php">
-        <?php
+          <?php
           $query = "SELECT tipo, imagen FROM imagenes WHERE id = 6";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
         <p><a href="../productos/epis/casco.php">
+            <?php
+            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 6";
+            $res = mysqli_query($conexion, $query);
+            $info = mysqli_fetch_array($res);
+            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
+            ?></a>
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 6";
-                    $res = mysqli_query($conexion, $query);
-                    $info = mysqli_fetch_array($res);
-                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
-                    ?></a>
-                    <?php
-                    echo "Modelo: " . $info['modelo'] . "<br>";
-                    echo "Precio: " . $info['precio'] . "€ <br>";
-                    ?>
+          echo "Modelo: " . $info['modelo'] . "<br>";
+          echo "Precio: " . $info['precio'] . "€ <br>";
+          ?>
           <a href="../productos/epis/casco.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
         <a href="../productos/epis/chaleco.php">
-        <?php
+          <?php
           $query = "SELECT tipo, imagen FROM imagenes WHERE id = 8";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
         <p><a href="../productos/epis/chaleco.php">
+            <?php
+            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 8";
+            $res = mysqli_query($conexion, $query);
+            $info = mysqli_fetch_array($res);
+            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
+            ?></a>
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 8";
-                    $res = mysqli_query($conexion, $query);
-                    $info = mysqli_fetch_array($res);
-                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
-                    ?></a>
-                    <?php
-                    echo "Modelo: " . $info['modelo'] . "<br>";
-                    echo "Precio: " . $info['precio'] . "€ <br>";
-                    ?>
+          echo "Modelo: " . $info['modelo'] . "<br>";
+          echo "Precio: " . $info['precio'] . "€ <br>";
+          ?>
           <a href="../productos/epis/chaleco.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
     </div>
 
     <div class="productos">
-    <div class="caja">
+      <div class="caja">
         <a href="../productos/epis/gafas.php">
-        <?php
+          <?php
           $query = "SELECT tipo, imagen FROM imagenes WHERE id = 10";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
         <p><a href="../productos/epis/gafas.php">
+            <?php
+            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 10";
+            $res = mysqli_query($conexion, $query);
+            $info = mysqli_fetch_array($res);
+            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
+            ?></a>
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 10";
-                    $res = mysqli_query($conexion, $query);
-                    $info = mysqli_fetch_array($res);
-                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
-                    ?></a>
-                    <?php
-                    echo "Modelo: " . $info['modelo'] . "<br>";
-                    echo "Precio: " . $info['precio'] . "€ <br>";
-                    ?>
+          echo "Modelo: " . $info['modelo'] . "<br>";
+          echo "Precio: " . $info['precio'] . "€ <br>";
+          ?>
           <a href="../productos/epis/gafas.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
 
       <div class="caja">
         <a href="../productos/epis/guantes.php">
-        <?php
+          <?php
           $query = "SELECT tipo, imagen FROM imagenes WHERE id = 11";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
         <p><a href="../productos/epis/guantes.php">
+            <?php
+            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 11";
+            $res = mysqli_query($conexion, $query);
+            $info = mysqli_fetch_array($res);
+            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
+            ?></a>
           <?php
-                    $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 11";
-                    $res = mysqli_query($conexion, $query);
-                    $info = mysqli_fetch_array($res);
-                    echo $info['nombre'] ." ". $info['caracteristica'] . '<br>';
-                    ?></a>
-                    <?php
-                    echo "Modelo: " . $info['modelo'] . "<br>";
-                    echo "Precio: " . $info['precio'] . "€ <br>";
-                    ?>
+          echo "Modelo: " . $info['modelo'] . "<br>";
+          echo "Precio: " . $info['precio'] . "€ <br>";
+          ?>
           <a href="../productos/epis/guantes.php" class="btn btn-light">Ver Producto</a>
         </p>
       </div>
