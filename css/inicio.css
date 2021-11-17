@@ -12,7 +12,6 @@ article > img{
     width: 238px;
     height: 238px;
 }
-
 .ofertas img:hover{
     border: 1px solid #b5bd00;
 }
@@ -34,5 +33,14 @@ article > img{
 @media (max-width: 1400px){
     .productos{
         gap: 20px;
+    }
+}
+
+@media (max-width: 1200px){
+    .productos{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
     }
 }

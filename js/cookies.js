@@ -1,6 +1,8 @@
-const botonAceptarCookies = document.getElementById('btn-aceptar-cookies');
+const boton = document.getElementById('btn-aceptar-cookies');
 const avisoCookies = document.getElementById('cookies');
 
-botonAceptarCookies.addEventListener('click', () =>{
-  avisoCookies.classList.remove('activo');
-});
+function aceptar() {
+  boton.addEventListener('click', function() {
+    avisoCookies.classList.remove('activo');
+  });
+}

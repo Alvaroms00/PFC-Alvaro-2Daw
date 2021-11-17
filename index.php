@@ -130,7 +130,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/amoladora.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -157,7 +157,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/atornillador.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -184,7 +184,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/miniamoladora.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -211,7 +211,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/electricas/sierra.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/tijeras/bahco.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -270,7 +270,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/tijeras/bellota.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -297,7 +297,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/tijeras/infaco.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -324,7 +324,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/tijeras/makita.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
             </div>
@@ -356,7 +356,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/jardin/asiento.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -383,7 +383,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/jardin/banco.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -410,7 +410,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/jardin/cenador.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
 
@@ -437,7 +437,7 @@
                     echo "Precio: " . $info['precio'] . "€ <br>";
                     ?>
                   </p>
-                  <a href="productos/electricas/.php" class="btn btn-dark">Ver Producto</a>
+                  <a href="productos/jardin/mesa-plegable.php" class="btn btn-dark">Ver Producto</a>
                 </div>
               </div>
             </div>
