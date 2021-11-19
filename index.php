@@ -50,7 +50,7 @@
 
       <div class="carrito">
         <i class="fas fa-shopping-cart"></i>
-        <a href="html/carrito.php">Carrito</a>
+        <a href="api/carrito/carrito.php">Carrito</a>
       </div>
 
       <div class="user">

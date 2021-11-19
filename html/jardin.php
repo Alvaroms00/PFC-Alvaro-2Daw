@@ -189,99 +189,16 @@
     <p>Decora tu jardín con esta selección de artículos</p>
 
     <div class="productos">
-      <div class="caja">
-        <a href="../productos/jardin/asiento.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 2";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/jardin/asiento.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 2";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/jardin/asiento.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
-
-      <div class="caja">
-        <a href="../productos/jardin/banco.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 5";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/jardin/banco.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 5";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Tamaño: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/jardin/banco.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="productos">
-      <div class="caja">
-        <a href="../productos/jardin/cenador.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 7";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/jardin/cenador.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 7";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Tamaño: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/jardin/cenador.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
-
-      <div class="caja">
-        <a href="../productos/jardin/mesa-plegable.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 20";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/jardin/mesa-plegable.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 20";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/jardin/mesa-plegable.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
+      <?php
+      $response = json_decode(file_get_contents('http://localhost/PFC-Alvaro-2Daw/api/productos/api-productos.php?familia=jardin'), true);
+      if ($response['statuscode'] == 200) {
+        foreach ($response['items'] as $item) {
+            include('articulo.php');
+        }
+      } else {
+        echo $response['response'];
+      }
+      ?>
     </div>
   </article>
 

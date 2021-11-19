@@ -3,7 +3,7 @@
 
 <head>
   <?php
-    include("../php/conectar_bd.php");
+    include("../php/db.php");
     include("../php/correo.php");
   ?>
   <meta charset="utf-8">

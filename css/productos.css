@@ -1,13 +1,11 @@
 .productos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
 }
 
-aside{
+aside {
     float: left;
     overflow-y: auto;
     width: 298px;
@@ -17,17 +15,17 @@ aside{
     z-index: 0;
 }
 
-article > p{
-    text-align: center; 
-    font-weight: bold; 
+article>p {
+    text-align: center;
+    font-weight: bold;
     font-size: 22px;
 }
 
-form{
+form {
     right: 0px;
 }
 
-.caja{
+.caja {
     background-color: rgba(0, 0, 0, .25);
     border: 1px solid rgba(222, 222, 222, .25);
     border-radius: 10px;
@@ -36,59 +34,60 @@ form{
     height: 292px;
 }
 
-.caja p{
+.caja p {
     margin: 80px 80px;
     font-size: 18px;
     color: black;
 }
 
-.caja img{
+.caja img {
     float: left;
     margin: 20px;
     width: 250px;
     height: 250px;
 }
 
-.btn{
+.btn {
     margin-top: 20px;
 }
 
-.caja a{
+.caja a {
     text-decoration: none;
     color: black;
 }
 
-.caja a:hover{
+.caja a:hover {
     color: #b5bd00;
 }
 
-.caja img:hover{
+.caja img:hover {
     border-color: #b5bd00;
 }
 
-@media (max-width: 1400px){
-    aside{
+@media (max-width: 1400px) {
+    aside {
         width: 298px;
         height: 500px;
         margin-right: 20px;
     }
-    .caja{
+
+    .caja {
         width: 450px;
         height: 210px;
     }
 
-    .caja p{
+    .caja p {
         margin: 25px 50px;
     }
 
-    .caja img{
+    .caja img {
         width: 170px;
         height: 170px;
     }
 }
 
-@media (max-width: 1200px){
-    .productos{
+@media (max-width: 1200px) {
+    .productos {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -96,7 +95,7 @@ form{
         gap: 20px;
     }
 
-    aside{
+    aside {
         width: 298px;
         height: 800px;
     }

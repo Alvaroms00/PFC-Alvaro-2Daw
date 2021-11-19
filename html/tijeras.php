@@ -190,100 +190,18 @@
 
     <p>Aqui esta nuestra selección de las mejores tijeras de podar del mercado</p>
     <div class="productos">
-      <div class="caja">
-        <a href="../productos/tijeras/bahco.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 27";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/bahco.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 27 ";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/bahco.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
-
-      <div class="caja">
-        <a href="../productos/tijeras/bellota.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 28";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/bellota.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 28";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/bellota.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
+      <?php
+      $response = json_decode(file_get_contents('http://localhost/PFC-Alvaro-2Daw/api/productos/api-productos.php?familia=tijeras'), true);
+      if ($response['statuscode'] == 200) {
+        foreach ($response['items'] as $item) {
+            include('articulo.php');
+        }
+      } else {
+        echo $response['response'];
+      }
+      ?>
     </div>
-
-    <div class="productos">
-      <div class="caja">
-        <a href="../productos/tijeras/infaco.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 29";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/infaco.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 29";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/infaco.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
-
-      <div class="caja">
-        <a href="../productos/tijeras/makita.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 30";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="img-thumbnail" alt="Tijera Electrica BAHCO"></a>
-        <p><a href="../productos/tijeras/makita.php">
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 30";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'] . '<br>';
-            ?></a>
-          <?php
-          echo "Modelo: " . $info['modelo'] . "<br>";
-          echo "Precio: " . $info['precio'] . "€ <br>";
-          ?>
-          <a href="../productos/tijeras/makita.php" class="btn btn-light">Ver Producto</a>
-        </p>
-      </div>
-    </div>
+    
   </article>
 
   <footer>

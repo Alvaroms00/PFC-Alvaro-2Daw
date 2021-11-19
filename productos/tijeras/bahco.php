@@ -30,6 +30,7 @@
     <script src="../../js/sidebars.js"></script>
     <script src="../../js/subir.js"></script>
     <script src="../../js/cantidad.js"></script>
+    <script src="../../js/carrito.js"></script>
 
 </head>
 
@@ -237,7 +238,7 @@
                             <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
                         </div>
                         <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                        <a href="" class="btn btn-dark">Añadir al Carrito</a>
+                        <button class="btn-carrito btn-dark">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
