@@ -10,7 +10,7 @@ if (isset($_POST["nombre"], $_POST["telefono"], $_POST["email"], $_POST["contras
 
     $hash = password_hash($contraseña, PASSWORD_BCRYPT);
 
-    $insertar = "INSERT INTO usuarios (id, nombre, telefono, email, contraseña) VALUES ('0', '$nombre', '$telefono', '$email', '$hash')";
+    $insertar = "INSERT INTO usuarios (id, nombre, telefono, email, contraseña) VALUES ('', '$nombre', '$telefono', '$email', '$hash')";
 
 }else {
     echo "Por favor introduzca todos los datos.";
@@ -19,6 +19,7 @@ if (isset($_POST["nombre"], $_POST["telefono"], $_POST["email"], $_POST["contras
 
 if (mysqli_query($conexion, $insertar)) {
     echo "Se han introducido correctamente los datos.";
+    header("location: ../index.php");
 }else{
     echo "Error.";
 }

@@ -1,7 +1,5 @@
 <?php
 
-include_once('conectar_bd.php');
-
 class DB{
     private $host;
     private $db;
@@ -10,28 +8,25 @@ class DB{
     private $charset;
 
     public function __construct(){
-        $this->host     = HOST;
-        $this->db       = DB;
-        $this->user     = USER;
-        $this->password = PASSWORD;
+        $this->host     = 'localhost';
+        $this->db       = 'ferreteria';
+        $this->user     = 'root';
+        $this->password = '';
         $this->charset  = 'utf8mb4';
     }
-
-    //mysql -e "USE todolistdb; select*from todolist" --user=azure --password=6#vWHD_$ --port=49175 --bind-address=52.176.6.0
 
     function connect(){
     
         try{
-
-            $connection = "mysql:host=".$this->host.";dbname=" . $this->db . ";charset=" . $this->charset;
+            
+            $conexion = "mysql:host=" . $this->host . ";dbname=" . $this->db . ";charset=" . $this->charset;
             $options = [
                 PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_EMULATE_PREPARES   => false,
             ];
-            //$pdo = new PDO($connection, $this->user, $this->password, $options);
-            $pdo = new PDO($connection,$this->user,$this->password);
+            $pdo = new PDO($conexion, $this->user, $this->password, $options);
+    
             return $pdo;
-
 
         }catch(PDOException $e){
             print_r('Error connection: ' . $e->getMessage());

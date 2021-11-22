@@ -4,6 +4,8 @@
 <head>
 <?php
   include("../php/conectar_bd.php");
+  include("../php/login.php");
+  include("../php/registro.php"); 
   ?>
     <meta charset="utf-8">
     <title>Ferretería Gabaldón</title>
@@ -57,7 +59,7 @@
                         <label for="contraseña">Contraseña</label>
                         <input type="password" name="contraseña" placeholder="Contraseña">
                     </p>
-                    <button type="submit" value="iniciar">Iniciar Sesión</button>
+                    <button type="submit" value="iniciar" nombre="iniciar">Iniciar Sesión</button>
                 </form>
             </div>
 

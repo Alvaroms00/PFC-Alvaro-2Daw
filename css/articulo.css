@@ -90,13 +90,13 @@ nav a:hover{
     margin-top: 60px;
 }
 
-.tab-content{
+.descripcion{
     padding: 20px;
     width: 1355px;
     height: 540px;
 }
 
-.tab-content li{
+.descripcion li{
     padding-bottom: 5px;
     list-style: square;
 }
@@ -155,8 +155,22 @@ input{
     .producto{
         width: 900px;
     }
-    .tab-content{
+    .descripcion{
         width: 900px;
     }
     
+}
+
+@media (max-width: 1200px){
+    .articulo{
+        gap: 20px;
+    }
+    .producto{
+        width: 690px;
+        height: 642px;
+    }
+
+    .descripcion{
+        width: 690px;   
+    }
 }
