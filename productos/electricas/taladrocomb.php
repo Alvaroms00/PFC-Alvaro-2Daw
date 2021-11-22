@@ -195,171 +195,123 @@
         <!-- Fin aside y Pricipio producto -->
         <div class="articulo">
             <div class="producto">
-                <div class="producto-img">
-                    <a data-fancybox="single" data-src="../../imagenestfg/taladro.jpg">
-                        <?php
-                        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 25";
-                        $res = mysqli_query($conexion, $query);
-                        $imagen = mysqli_fetch_assoc($res);
-                        ?>
-                        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="taladro combinado">
-                    </a>
-                </div>
-                <!-- Producto -->
-                <div class="producto-info">
-                    <div class="titulo">
-                        <h1>
-                            <?php
-                            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 25";
-                            $res = mysqli_query($conexion, $query);
-                            $info = mysqli_fetch_array($res);
-                            echo $info['nombre'] . " " . $info['caracteristica'];
-                            ?>
-                        </h1>
-                        <span class="modelo">
-                            <?php
-                            echo $info['modelo'];
-                            ?>
-                        </span>
+                <?php
+                $query = "SELECT * FROM articulos WHERE id = 25";
+                $res = mysqli_query($conexion, $query);
+                $info = mysqli_fetch_assoc($res);
+                echo "<div class='producto-img'>";
+                echo "<a data-fancybox='single' data-src='../../imagenestfg/taladrocomb.jpg'>";
+                echo "<img src='../../imagenestfg/" . $info['imagen'] . "'></a></div>";
+                echo "<div class='producto-info'>";
+                echo "<div class='titulo'>";
+                echo "<h1>" . $info['nombre'] . " " . $info['caracteristica'] . "</h1>";
+                echo "<span class'modelo'>" . $info['modelo'] . "</span></div>";
+                echo "<div class='producto-desc'>";
+                echo "<p>" . $info['nombre'] . "<br>";
+                echo "Marca: " . $info['marca'] . "<br>";
+                echo "Precio: " . $info['precio'] . " €</p></div>";
+                ?>
+                <div class="info">
+                    <div class="añadir">
+                        <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
+                        <input type='text' id="cantidad" value="1">
+                        <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
                     </div>
-                    <div class="producto-desc">
-                        <p>
-                            <?php
-                            echo $info['nombre'] . "<br>";
-                            echo "Marca: " . $info['marca'] . "<br>";
-                            echo "Precio: " . $info['precio'] . " €";
-                            ?>
-                        </p>
-                    </div>
-                    <div class="info">
-                        <div class="añadir">
-                            <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
-                            <input type='text' id="cantidad" value="1">
-                            <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
-                        </div>
-                        <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                        <a href="" class="btn btn-dark">Añadir al Carrito</a>
-                    </div>
+                    <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
+                    <a href="" class="btn btn-dark">Añadir al Carrito</a>
                 </div>
             </div>
-            <!-- Descripcion -->
-            <div class="descripcion" id="descripcion">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link link-dark active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">General</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link link-dark" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Información Técnica</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link link-dark" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Productos Relacionados</button>
-                    </li>
-                </ul>
-                <!-- Contenidos  -->
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <p><strong>Beneficios del Usuario</strong></p>
-                        <ul>
-                            <li>Taladro Combinado más compacto</li>
-                            <li>Mango con nuevo diseño más ergonómico</li>
-                            <li>Portabrocas autoblocante, cambio más rápido de los accesorios</li>
-                            <li>2 baterias de 4 Ah, cargador rápido y maletín</li>
-                            <li>Led en la parte frontal que ilumina el punto de trabajo</li>
-                        </ul>
-                    </div>
+        </div>
+        <!-- Descripcion -->
+        <div class="descripcion" id="descripcion">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link link-dark active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">General</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link link-dark" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Información Técnica</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link link-dark" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Productos Relacionados</button>
+                </li>
+            </ul>
+            <!-- Contenidos  -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p><strong>Beneficios del Usuario</strong></p>
+                    <ul>
+                        <li>Taladro Combinado más compacto</li>
+                        <li>Mango con nuevo diseño más ergonómico</li>
+                        <li>Portabrocas autoblocante, cambio más rápido de los accesorios</li>
+                        <li>2 baterias de 4 Ah, cargador rápido y maletín</li>
+                        <li>Led en la parte frontal que ilumina el punto de trabajo</li>
+                    </ul>
+                </div>
 
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <p><strong>Información Técnica</strong></p>
-                        <div class="info-tecnica">
-                            <p>Consulte o descargue el PDF para saber la información técnica de este artículo.</p>
-                            <a href="../ficha tecnica/electricas/taladorcomb.pdf" target="_blank"><i class="far fa-file-pdf"></i>
-                                &nbsp; Información del Producto</a> <br>
-                            <a href="../ficha tecnica/electricas/taladorcomb.pdf" download="taladorcomb"><i class="fas fa-file-download"></i> &nbsp; Descargar</a>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <p><strong>Información Técnica</strong></p>
+                    <div class="info-tecnica">
+                        <p>Consulte o descargue el PDF para saber la información técnica de este artículo.</p>
+                        <a href="../ficha tecnica/electricas/taladorcomb.pdf" target="_blank"><i class="far fa-file-pdf"></i>
+                            &nbsp; Información del Producto</a> <br>
+                        <a href="../ficha tecnica/electricas/taladorcomb.pdf" download="taladorcomb"><i class="fas fa-file-download"></i> &nbsp; Descargar</a>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="relacionados">
+                        <div class="card" style="width: 15em;">
+                            <?php
+                            $query = "SELECT * FROM articulos WHERE id = 21";
+                            $res = mysqli_query($conexion, $query);
+                            $info = mysqli_fetch_array($res);
+
+                            echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+                            echo "<div class='card-body'>";
+                            echo "<h5 class='card-title'>";
+                            echo $info['nombre'] . "</h5>";
+                            echo "<p class='card-text'>";
+                            echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                            echo "Modelo: " . $info['modelo'] . "<br>";
+                            echo "Precio: " . $info['precio'] . "€ <br></p>";
+                            echo "<a href='miniamoladora.php' class='btn btn-dark'>Ver Producto</a> </div>";
+                            ?>
                         </div>
-                    </div>
 
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <div class="relacionados">
-                            <div class="card" style="width: 15em;">
-                                <?php
-                                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 21";
-                                $res = mysqli_query($conexion, $query);
-                                $imagen = mysqli_fetch_assoc($res);
-                                ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="mini amoladora">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php
-                                        $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 21";
-                                        $res = mysqli_query($conexion, $query);
-                                        $info = mysqli_fetch_array($res);
-                                        echo $info['nombre'];
-                                        ?>
-                                    </h5>
-                                    <p class="card-text">
-                                        <?php
-                                        echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                                        echo "Modelo: " . $info['modelo'] . "<br>";
-                                        echo "Precio: " . $info['precio'] . "€ <br>";
-                                        ?>
-                                    </p>
-                                    <a href="miniamoladora.php" class="btn btn-dark">Ver Producto</a>
-                                </div>
-                            </div>
+                        <div class="card" style="width: 15em;">
+                            <?php
+                            $query = "SELECT * FROM articulos WHERE id = 24";
+                            $res = mysqli_query($conexion, $query);
+                            $info = mysqli_fetch_array($res);
 
-                            <div class="card" style="width: 15em;">
-                                <?php
-                                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 24";
-                                $res = mysqli_query($conexion, $query);
-                                $imagen = mysqli_fetch_assoc($res);
-                                ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="sierra">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php
-                                        $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 24";
-                                        $res = mysqli_query($conexion, $query);
-                                        $info = mysqli_fetch_array($res);
-                                        echo $info['nombre'];
-                                        ?>
-                                    </h5>
-                                    <p class="card-text">
-                                        <?php
-                                        echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                                        echo "Modelo: " . $info['modelo'] . "<br>";
-                                        echo "Precio: " . $info['precio'] . "€ <br>";
-                                        ?>
-                                    </p>
-                                    <a href="sierra.php" class="btn btn-dark">Ver Producto</a>
-                                </div>
-                            </div>
+                            echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+                            echo "<div class='card-body'>";
+                            echo "<h5 class='card-title'>";
+                            echo $info['nombre'] . "</h5>";
+                            echo "<p class='card-text'>";
+                            echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                            echo "Modelo: " . $info['modelo'] . "<br>";
+                            echo "Precio: " . $info['precio'] . "€ <br></p>";
+                            echo "<a href='sierra.php' class='btn btn-dark'>Ver Producto</a> </div>";
+                            ?>
+                        </div>
 
-                            <div class="card" style="width: 15em;">
-                                <?php
-                                $query = "SELECT tipo, imagen FROM imagenes WHERE id = 26";
-                                $res = mysqli_query($conexion, $query);
-                                $imagen = mysqli_fetch_assoc($res);
-                                ?>
-                                <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="taladro percutor">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php
-                                        $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 26";
-                                        $res = mysqli_query($conexion, $query);
-                                        $info = mysqli_fetch_array($res);
-                                        echo $info['nombre'];
-                                        ?>
-                                    </h5>
-                                    <p class="card-text">
-                                        <?php
-                                        echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                                        echo "Modelo: " . $info['modelo'] . "<br>";
-                                        echo "Precio: " . $info['precio'] . "€ <br>";
-                                        ?>
-                                    </p>
-                                    <a href="taladroperc.php" class="btn btn-dark">Ver Producto</a>
-                                </div>
-                            </div>
+                        <div class="card" style="width: 15em;">
+                            <?php
+                            $query = "SELECT * FROM articulos WHERE id = 26";
+                            $res = mysqli_query($conexion, $query);
+                            $info = mysqli_fetch_array($res);
+
+                            echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+                            echo "<div class='card-body'>";
+                            echo "<h5 class='card-title'>";
+                            echo $info['nombre'] . "</h5>";
+                            echo "<p class='card-text'>";
+                            echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+                            echo "Modelo: " . $info['modelo'] . "<br>";
+                            echo "Precio: " . $info['precio'] . "€ <br></p>";
+                            echo "<a href='taladroperc.php' class='btn btn-dark'>Ver Producto</a> </div>";
+                            ?>
                         </div>
                     </div>
                 </div>

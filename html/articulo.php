@@ -1,5 +1,6 @@
 <div class="caja">
     <?php
+    echo "<input type='hidden' id='id' value='". $item['id']. "'>";
     echo '<a href="../productos/' . $item['familia'] . $item['enlace'] . '">';
     echo "<img src='../imagenestfg/" . $item['imagen']. "' class='img-thumbnail'></a></p>";
     echo "<p><a href='../productos/" . $item['familia'] . $item['enlace'] . "'>";

@@ -32,7 +32,7 @@ function mostrar($carrito){
     $total = 0;
     $totalItems = 0;
     foreach($itemsCarrito as $itemCarrito){
-        $httpRequest = file_get_contents('http://localhost/curso/49.%20carrito/terminado/api/productos/api-productos.php?get-item=' . $itemCarrito['id']); 
+        $httpRequest = file_get_contents('http://localhost/PFC-Alvaro-2Daw/api/carrito/api-carrito.php?get-item=' . $itemCarrito['id']); 
         $itemProducto = json_decode($httpRequest, 1)['item'];
         $itemProducto['cantidad'] = $itemCarrito['cantidad'];
         $itemProducto['subtotal'] = $itemProducto['cantidad'] * $itemProducto['precio'];
@@ -44,3 +44,29 @@ function mostrar($carrito){
     //array_push($fullItems, ['count' => $totalItems, 'total' => $total]);
     echo json_encode($resArray);
 }
+
+function add($carrito){
+    if(isset($_GET['id'])){
+        $res = $carrito->add($_GET['id']);
+        echo $res;
+    }else{
+        // error
+    }
+}
+
+function remove($carrito){
+    if(isset($_GET['id'])){
+        $res = $carrito->remove($_GET['id']);
+        if($res){
+            echo json_encode(['statuscode' => 200]);
+        }else{
+            echo json_encode(['statuscode' => 400]);
+        }
+    }else{
+        // error
+    }
+}
+
+
+
+?>

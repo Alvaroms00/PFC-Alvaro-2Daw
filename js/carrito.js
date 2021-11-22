@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () =>{
     const cookies = document.cookie.split(';');
     let cookie = null;

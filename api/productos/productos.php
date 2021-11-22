@@ -19,15 +19,11 @@ class Productos extends DB
         return [
             'id'        => $row['id'],
             'nombre'    => $row['nombre'],
-            'marca'    => $row['marca'],
-            'modelo' => $row['modelo'],
-            'caracteristica' => $row['caracteristica'],
-            'categoria' => $row['familia'],
-            'precio'    => $row['precio'],
+            'marca'    => $row['marca'], 
             'familia' => $row['familia'],
-            'enlace' => $row['enlace'],
-            'imagen' => $row['imagen'],
-            'tipo' => $row['tipo']
+            'precio'    => $row['precio'],
+            'imagen' => $row['imagen']
+            
         ];
     }
 

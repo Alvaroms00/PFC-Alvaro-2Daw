@@ -189,43 +189,24 @@
       </div>
     </aside>
 
-    <div class="producto">
-      <div class="producto-img">
-        <a data-fancybox="single" data-src="../../imagenestfg/banco.jpg">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 5";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="banco">
-        </a>
-      </div>
-      <!-- Producto -->
-      <div class="producto-info">
-        <div class="titulo">
-          <h1>
-            <?php
-            $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 5";
-            $res = mysqli_query($conexion, $query);
-            $info = mysqli_fetch_array($res);
-            echo $info['nombre'] . " " . $info['caracteristica'];
-            ?>
-          </h1>
-          <span class="modelo">
-            <?php
-            echo $info['modelo'];
-            ?>
-          </span>
-        </div>
-        <div class="producto-desc">
-          <p>
-            <?php
-            echo $info['nombre'] . "<br>";
-            echo "Marca: " . $info['marca'] . "<br>";
-            echo "Precio: " . $info['precio'] . " €";
-            ?>
-          </p>
-        </div>
+    <div class="articulo">
+      <div class="producto">
+        <?php
+        $query = "SELECT * FROM articulos WHERE id = 5";
+        $res = mysqli_query($conexion, $query);
+        $info = mysqli_fetch_assoc($res);
+        echo "<div class='producto-img'>";
+        echo "<a data-fancybox='single' data-src='../../imagenestfg/banco.jpg'>";
+        echo "<img src='../../imagenestfg/" . $info['imagen'] . "'></a></div>";
+        echo "<div class='producto-info'>";
+        echo "<div class='titulo'>";
+        echo "<h1>" . $info['nombre'] . " " . $info['caracteristica'] . "</h1>";
+        echo "<span class'modelo'>" . $info['modelo'] . "</span></div>";
+        echo "<div class='producto-desc'>";
+        echo "<p>" . $info['nombre'] . "<br>";
+        echo "Marca: " . $info['marca'] . "<br>";
+        echo "Precio: " . $info['precio'] . " €</p></div>";
+        ?>
         <div class="info">
           <div class="añadir">
             <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
@@ -276,83 +257,56 @@
           <div class="relacionados">
             <div class="card" style="width: 15em;">
               <?php
-              $query = "SELECT tipo, imagen FROM imagenes WHERE id = 2";
+              $query = "SELECT * FROM articulos WHERE id = 2";
               $res = mysqli_query($conexion, $query);
-              $imagen = mysqli_fetch_assoc($res);
+              $info = mysqli_fetch_array($res);
+
+              echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+              echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>";
+              echo $info['nombre'] . "</h5>";
+              echo "<p class='card-text'>";
+              echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+              echo "Modelo: " . $info['modelo'] . "<br>";
+              echo "Precio: " . $info['precio'] . "€ <br></p>";
+              echo "<a href='asiento.php' class='btn btn-dark'>Ver Producto</a> </div>";
               ?>
-              <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="asiento">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <?php
-                  $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 2";
-                  $res = mysqli_query($conexion, $query);
-                  $info = mysqli_fetch_array($res);
-                  echo $info['nombre'];
-                  ?>
-                </h5>
-                <p class="card-text">
-                  <?php
-                  echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                  echo "Modelo: " . $info['modelo'] . "<br>";
-                  echo "Precio: " . $info['precio'] . "€ <br>";
-                  ?>
-                </p>
-                <a href="asiento.php" class="btn btn-dark">Ver Producto</a>
-              </div>
             </div>
 
             <div class="card" style="width: 15em;">
               <?php
-              $query = "SELECT tipo, imagen FROM imagenes WHERE id = 7";
+              $query = "SELECT * FROM articulos WHERE id = 7";
               $res = mysqli_query($conexion, $query);
-              $imagen = mysqli_fetch_assoc($res);
+              $info = mysqli_fetch_array($res);
+
+              echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+              echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>";
+              echo $info['nombre'] . "</h5>";
+              echo "<p class='card-text'>";
+              echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+              echo "Modelo: " . $info['modelo'] . "<br>";
+              echo "Precio: " . $info['precio'] . "€ <br></p>";
+              echo "<a href='cenador.php' class='btn btn-dark'>Ver Producto</a> </div>";
               ?>
-              <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="caseta">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <?php
-                  $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 7";
-                  $res = mysqli_query($conexion, $query);
-                  $info = mysqli_fetch_array($res);
-                  echo $info['nombre'];
-                  ?>
-                </h5>
-                <p class="card-text">
-                  <?php
-                  echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                  echo "Tamaño: " . $info['modelo'] . "<br>";
-                  echo "Precio: " . $info['precio'] . "€ <br>";
-                  ?>
-                </p>
-                <a href="cenador.php" class="btn btn-dark">Ver Producto</a>
-              </div>
             </div>
 
             <div class="card" style="width: 15em;">
               <?php
-              $query = "SELECT tipo, imagen FROM imagenes WHERE id = 20";
+              $query = "SELECT * FROM articulos WHERE id = 20";
               $res = mysqli_query($conexion, $query);
-              $imagen = mysqli_fetch_assoc($res);
+              $info = mysqli_fetch_array($res);
+
+              echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+              echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>";
+              echo $info['nombre'] . "</h5>";
+              echo "<p class='card-text'>";
+              echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+              echo "Modelo: " . $info['modelo'] . "<br>";
+              echo "Precio: " . $info['precio'] . "€ <br></p>";
+              echo "<a href='mesa-plegable.php' class='btn btn-dark'>Ver Producto</a> </div>";
               ?>
-              <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="mesa plegable">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <?php
-                  $query = "SELECT nombre, caracteristica, marca, modelo, precio FROM articulos WHERE id = 20";
-                  $res = mysqli_query($conexion, $query);
-                  $info = mysqli_fetch_array($res);
-                  echo $info['nombre'];
-                  ?>
-                </h5>
-                <p class="card-text">
-                  <?php
-                  echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                  echo "Modelo: " . $info['modelo'] . "<br>";
-                  echo "Precio: " . $info['precio'] . "€ <br>";
-                  ?>
-                </p>
-                <a href="mesa-plegable.php" class="btn btn-dark">Ver Producto</a>
-              </div>
             </div>
           </div>
         </div>
