@@ -8,8 +8,7 @@ if (isset($_POST['iniciar'])) {
     
     
     if (($nf == 1) && (password_verify($contraseña, $buscarcontraseña['contraseña']))) {
-        session_start();
-		$_SESSION['nombredelusuario']=$nombre;
+        echo "Se ha iniciado sesion correctamente";
 		header("Location: ../index.php");
 	}
 else

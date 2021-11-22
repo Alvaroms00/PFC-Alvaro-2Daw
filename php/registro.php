@@ -12,10 +12,6 @@ if (isset($_POST["nombre"], $_POST["telefono"], $_POST["email"], $_POST["contras
 
     $insertar = "INSERT INTO usuarios (id, nombre, telefono, email, contraseña) VALUES ('', '$nombre', '$telefono', '$email', '$hash')";
 
-}else {
-    echo "Por favor introduzca todos los datos.";
-}
-
 
 if (mysqli_query($conexion, $insertar)) {
     echo "Se han introducido correctamente los datos.";
@@ -23,5 +19,8 @@ if (mysqli_query($conexion, $insertar)) {
 }else{
     echo "Error.";
 }
+
+}
+
 
 ?>
