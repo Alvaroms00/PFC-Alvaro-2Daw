@@ -4,8 +4,8 @@
 <head>
 <?php
   include("../php/conectar_bd.php");
-  include("../php/login.php");
   include("../php/registro.php"); 
+  include("../php/user_sesion.php");
   ?>
     <meta charset="utf-8">
     <title>Ferretería Gabaldón</title>

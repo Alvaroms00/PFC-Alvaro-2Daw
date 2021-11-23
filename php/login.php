@@ -1,20 +1,33 @@
 <?php
-include('conectar_bd.php');
+include 'db.php';
 
-if (isset($_POST['iniciar'])) {
-    $consulta = mysqli_query($conexion, ("SELECT * FROM usuarios WHERE usuario = '$nombre'"));
-    $nf = mysqli_num_rows($consulta);
-    $buscarcontraseña = mysqli_fetch_array($consulta);
-    
-    
-    if (($nf == 1) && (password_verify($contraseña, $buscarcontraseña['contraseña']))) {
-        echo "Se ha iniciado sesion correctamente";
-		header("Location: ../index.php");
-	}
-else
-	{
-	echo "Usuario o contraseña incorrecto.";
-	}
+class nombre extends DB{
+    private $nombre;
+
+    public function nombreExists($nombre, $pass){
+        $md5pass = md5($pass);
+        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE nombre = :nombre AND password = :pass');
+        $query->execute(['nombre' => $nombre, 'pass' => $md5pass]);
+
+        if($query->rowCount()){
+            return "Se ha iniciado sesion";
+        }else{
+            return "Usuario o contraseña incorrectas";
+        }
+    }
+
+    public function setnombre($nombre){
+        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE nombre = :nombre');
+        $query->execute(['nombre' => $nombre]);
+        
+        foreach ($query as $currentnombre) {
+            $this->nombre = $currentnombre['nombre'];
+        }
+    }
+
+    public function getNombre(){
+        return $this->nombre;
+    }
 }
 
-
+?>

@@ -87,7 +87,11 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 60px;
+    margin-top: 40px;
+}
+
+ul{
+    list-style: none;
 }
 
 .descripcion{
@@ -157,6 +161,7 @@ input{
     }
     .descripcion{
         width: 900px;
+        height: 642px;
     }
     
 }
@@ -171,6 +176,15 @@ input{
     }
 
     .descripcion{
-        width: 690px;   
+        width: 690px;
+        height: 642px;   
+    }
+    .relacionados{
+        gap: 10px;
+    }
+
+    .relacionados img{
+        width: auto;
+        height: auto;
     }
 }

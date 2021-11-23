@@ -23,6 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
   <script src="js/cookies.js"></script>
+  <script src="js/carrito.js"></script>
 </head>
 
 <body>
@@ -48,10 +49,13 @@
         </form>
       </div>
 
-      <div class="carrito">
-        <i class="fas fa-shopping-cart"></i>
-        <a href="api/carrito/carrito.php">Carrito</a>
-      </div>
+      <li class="carrito">
+        <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
+        <div id="carrito-container">
+          <div id="tabla">
+          </div>
+        </div>
+      </li>
 
       <div class="user">
         <i class="fas fa-user"></i>
@@ -184,7 +188,7 @@
           <div class="carousel-item">
             <div class="productos">
 
-            <div class="card" style="width: 15em;">
+              <div class="card" style="width: 15em;">
                 <?php
                 $query = "SELECT * FROM articulos WHERE id = 27";
                 $res = mysqli_query($conexion, $query);
@@ -261,7 +265,7 @@
           <div class="carousel-item">
             <div class="productos">
 
-            <div class="card" style="width: 15em;">
+              <div class="card" style="width: 15em;">
                 <?php
                 $query = "SELECT * FROM articulos WHERE id = 2";
                 $res = mysqli_query($conexion, $query);

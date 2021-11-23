@@ -51,12 +51,12 @@
             </div>
 
             <li class="carrito">
-            <i class="fas fa-shopping-cart"></i>
-                <a href="#" class='btn-carrito'>Carrito</a>
+                <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
                 <div id="carrito-container">
                     <div id="tabla">
                     </div>
                 </div>
+            </li>
         </nav>
     </header>
 
@@ -204,7 +204,7 @@
                 $res = mysqli_query($conexion, $query);
                 $item = mysqli_fetch_assoc($res);
                 echo "<div class='producto-img'>";
-                echo "<input type='hidden' id='id' value='". $item['id']. "'>";
+                echo "<input type='hidden' id='id' value='" . $item['id'] . "'>";
                 echo "<a data-fancybox='single' data-src='../../imagenestfg/tijerabahco.jpg'>";
                 echo "<img src='../../imagenestfg/" . $item['imagen'] . "'></a></div>";
                 echo "<div class='producto-item'>";
@@ -277,7 +277,7 @@
                             echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
                             echo "<div class='card-body'>";
                             echo "<h5 class='card-title'>";
-                            echo $info['nombre']. "</h5>" ;
+                            echo $info['nombre'] . "</h5>";
                             echo "<p class='card-text'>";
                             echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
                             echo "Modelo: " . $info['modelo'] . "<br>";
@@ -295,7 +295,7 @@
                             echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
                             echo "<div class='card-body'>";
                             echo "<h5 class='card-title'>";
-                            echo $info['nombre']."</h5>";
+                            echo $info['nombre'] . "</h5>";
                             echo "<p class='card-text'>";
                             echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
                             echo "Modelo: " . $info['modelo'] . "<br>";
@@ -313,7 +313,7 @@
                             echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
                             echo "<div class='card-body'>";
                             echo "<h5 class='card-title'>";
-                            echo $info['nombre']."</h5>";
+                            echo $info['nombre'] . "</h5>";
                             echo "<p class='card-text'>";
                             echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
                             echo "Modelo: " . $info['modelo'] . "<br>";

@@ -43,6 +43,10 @@ header a:hover{
     color: #b5bd00;
 }
 
+.carrito{
+    list-style: none;
+}
+
 footer{
     margin-top: 20px;
     background-color: rgb(0, 0, 0);
