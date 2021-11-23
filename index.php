@@ -22,8 +22,8 @@
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
-  <script src="js/cookies.js"></script>
-  <script src="js/carrito.js"></script>
+  <script src="js/cookies.js" defer></script>
+  <script src="js/carrito.js" defer></script>
 </head>
 
 <body>
@@ -238,7 +238,7 @@
                 echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
                 echo "Modelo: " . $info['modelo'] . "<br>";
                 echo "Precio: " . $info['precio'] . "€ <br></p>";
-                echo "<a href='productos/tjeras/infaco.php' class='btn btn-dark'>Ver Producto</a> </div>";
+                echo "<a href='productos/tijeras/infaco.php' class='btn btn-dark'>Ver Producto</a> </div>";
                 ?>
               </div>
 

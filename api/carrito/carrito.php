@@ -9,8 +9,9 @@ class Carrito extends Session{
 
     public function load(){
         if($this->getValue() == NULL){
-            return '[]';
+            return [];
         }
+
         return $this->getValue();
     }
 
@@ -19,19 +20,24 @@ class Carrito extends Session{
             $items = [];
         }else{
             $items = json_decode($this->getValue(), 1);
+
             for($i=0; $i<sizeof($items); $i++){
                 if($items[$i]['id'] == $id){
                     $items[$i]['cantidad']++;
                     $this->setValue(json_encode($items));
+
                     return $this->getValue();
                 }
             }
         }
-        
+
+        // operaciones cuando el carrito tiene un nuevo elemento
         $item = ['id' => (int)$id, 'cantidad' => 1];
-        
+
         array_push($items, $item);
+
         $this->setValue(json_encode($items));
+
         return $this->getValue();
     }
 
@@ -41,26 +47,25 @@ class Carrito extends Session{
         }else{
             $items = json_decode($this->getValue(), 1);
 
-            for($i=0; $i<sizeof($items); $i++){
-                
+            for($i =0; $i< sizeof($items); $i++){
+
                 if($items[$i]['id'] == $id){
                     $items[$i]['cantidad']--;
+
                     if($items[$i]['cantidad'] == 0){
                         unset($items[$i]);
                         $items = array_values($items);
                     }
+
                     $this->setValue(json_encode($items));
                     return true;
                 }
             }
         }
-        
-        // $item = ['id' => (int)$id, 'cantidad' => 1];
-        
-        // array_push($items, $item);
-        // $this->setValue(json_encode($items));
-        // return $this->getValue();
     }
+
+    
+
 
 }
 ?>

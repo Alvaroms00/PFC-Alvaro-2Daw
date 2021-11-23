@@ -31,7 +31,7 @@
     <script src="../../js/sidebars.js"></script>
     <script src="../../js/subir.js"></script>
     <script src="../../js/cantidad.js"></script>
-    <script src="../../js/carrito.js"></script>
+    <script src="../../js/carrito.js" defer></script>
 
 </head>
 
@@ -225,7 +225,7 @@
                     </div>
                     <div class="botones">
                         <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                        <button class="btn-carrito btn-dark">Añadir al carrito</button>
+                        <button class="btn-add btn-dark">Añadir al carrito</button>
                     </div>
                 </div>
             </div>

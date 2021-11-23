@@ -38,7 +38,7 @@ function actualizarCarritoUI() {
             console.log(data);
             let tablaCont = document.querySelector('#tabla');
             let precioTotal = '';
-            let html = ``;
+            let html = '';
             data.items.forEach(element => {
                 html += `
                 <div class='fila'>
@@ -69,7 +69,7 @@ function actualizarCarritoUI() {
         });
 }
 
-const botones = document.querySelectorAll('button');
+const botones = document.querySelectorAll('btn-add');
 
 botones.forEach(boton => {
     const id = boton.parentElement.parentElement.children[0].value;
@@ -82,7 +82,7 @@ botones.forEach(boton => {
 const addItemToCarrito = id => {
     fetch('http://localhost/PFC-Alvaro-2Daw/api/carrito/api-carrito.php?action=add&id=' + id)
         .then(response => {
-            return response.text();
+            return response.json();
         })
         .then(data => {
             actualizarCarritoUI();

@@ -1,5 +1,5 @@
-const boton = document.getElementById('btn-aceptar-cookies');
-const avisoCookies = document.getElementById('cookies');
+let boton = document.getElementById('btn-aceptar-cookies');
+let avisoCookies = document.getElementById('cookies');
 
 
 boton.addEventListener('click', function () {

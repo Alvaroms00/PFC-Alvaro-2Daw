@@ -19,11 +19,9 @@ class Productos extends DB
         return [
             'id'        => $row['id'],
             'nombre'    => $row['nombre'],
-            'marca'    => $row['marca'], 
-            'familia' => $row['familia'],
+            'marca'    => $row['marca'],
             'precio'    => $row['precio'],
             'imagen' => $row['imagen']
-            
         ];
     }
 
@@ -36,7 +34,7 @@ class Productos extends DB
         while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
             $item = [
                 'id'        => $row['id'],
-                'referencia'=> $row['referencia'],
+                'referencia' => $row['referencia'],
                 'nombre'    => $row['nombre'],
                 'caracteristica' => $row['caracteristica'],
                 'marca'    => $row['marca'],
