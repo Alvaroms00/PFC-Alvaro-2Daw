@@ -45,7 +45,7 @@
       <div class="buscar">
         <form method="GET" action="">
           <input type="search" name="buscar" placeholder="Busca nuestros productos">
-          <button class="btn btn-light">Buscar</button>
+          <button class="btn-light">Buscar</button>
         </form>
       </div>
 

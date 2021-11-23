@@ -38,9 +38,14 @@ article > img{
 
 @media (max-width: 1200px){
     .productos{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .ofertas img{
+        width: auto;
+        height: auto;
     }
 }

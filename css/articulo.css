@@ -97,12 +97,12 @@ ul{
 .descripcion{
     padding: 20px;
     width: 1355px;
-    height: 540px;
+    height: 642px;
 }
 
 .descripcion li{
     padding-bottom: 5px;
-    list-style: square;
+    list-style: none;
 }
 
 .añadir{
