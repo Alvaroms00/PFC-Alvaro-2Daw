@@ -45,7 +45,7 @@
       <div class="buscar">
         <form method="GET" action="">
           <input type="search" name="buscar" placeholder="Busca nuestros productos">
-          <button class="btn-light">Buscar</button>
+          <a href="html/busqueda.php" class="btn btn-light">Buscar</a>
         </form>
       </div>
 
