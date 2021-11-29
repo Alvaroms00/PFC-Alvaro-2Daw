@@ -189,34 +189,34 @@
     </aside>
 
     <div class="articulo">
-            <div class="producto">
-                <?php
-                $query = "SELECT * FROM articulos WHERE id = 7";
-                $res = mysqli_query($conexion, $query);
-                $info = mysqli_fetch_assoc($res);
-                echo "<div class='producto-img'>";
-                echo "<a data-fancybox='single' data-src='../../imagenestfg/caseta.jpg'>";
-                echo "<img src='../../imagenestfg/" . $info['imagen'] . "'></a></div>";
-                echo "<div class='producto-info'>";
-                echo "<div class='titulo'>";
-                echo "<h1>" . $info['nombre'] . " " . $info['caracteristica'] . "</h1>";
-                echo "<span class'modelo'>" . $info['modelo'] . "</span></div>";
-                echo "<div class='producto-desc'>";
-                echo "<p>" . $info['nombre'] . "<br>";
-                echo "Marca: " . $info['marca'] . "<br>";
-                echo "Precio: " . $info['precio'] . " €</p></div>";
-                ?>
-                <div class="info">
-                    <div class="añadir">
-                        <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
-                        <input type='text' id="cantidad" value="1">
-                        <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
-                    </div>
-                    <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                    <a href="" class="btn btn-dark">Añadir al Carrito</a>
-                </div>
-            </div>
+      <div class="producto">
+        <?php
+        $query = "SELECT * FROM articulos WHERE id = 7";
+        $res = mysqli_query($conexion, $query);
+        $info = mysqli_fetch_assoc($res);
+        echo "<div class='producto-img'>";
+        echo "<a data-fancybox='single' data-src='../../imagenestfg/caseta.jpg'>";
+        echo "<img src='../../imagenestfg/" . $info['imagen'] . "'></a></div>";
+        echo "<div class='producto-info'>";
+        echo "<div class='titulo'>";
+        echo "<h1>" . $info['nombre'] . " " . $info['caracteristica'] . "</h1>";
+        echo "<span class'modelo'>" . $info['modelo'] . "</span></div>";
+        echo "<div class='producto-desc'>";
+        echo "<p>" . $info['nombre'] . "<br>";
+        echo "Marca: " . $info['marca'] . "<br>";
+        echo "Precio: " . $info['precio'] . " €</p></div>";
+        ?>
+        <div class="info">
+          <div class="añadir">
+            <button id='aumentar' class="btn btn-dark" onclick="aumentar()">+</button>
+            <input type='text' id="cantidad" value="1">
+            <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
+          </div>
+          <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
+          <a href="" class="btn btn-dark">Añadir al Carrito</a>
         </div>
+      </div>
+    </div>
 
     <div class="descripcion">
 
@@ -253,58 +253,58 @@
         </div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <div class="relacionados">
-          <div class="card" style="width: 15em;">
-                            <?php
-                            $query = "SELECT * FROM articulos WHERE id = 2";
-                            $res = mysqli_query($conexion, $query);
-                            $info = mysqli_fetch_array($res);
-
-                            echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
-                            echo "<div class='card-body'>";
-                            echo "<h5 class='card-title'>";
-                            echo $info['nombre'] . "</h5>";
-                            echo "<p class='card-text'>";
-                            echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                            echo "Modelo: " . $info['modelo'] . "<br>";
-                            echo "Precio: " . $info['precio'] . "€ <br></p>";
-                            echo "<a href='asiento.php' class='btn btn-dark'>Ver Producto</a> </div>";
-                            ?>
-                        </div>
             <div class="card" style="width: 15em;">
-                            <?php
-                            $query = "SELECT * FROM articulos WHERE id = 5";
-                            $res = mysqli_query($conexion, $query);
-                            $info = mysqli_fetch_array($res);
+              <?php
+              $query = "SELECT * FROM articulos WHERE id = 2";
+              $res = mysqli_query($conexion, $query);
+              $info = mysqli_fetch_array($res);
 
-                            echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
-                            echo "<div class='card-body'>";
-                            echo "<h5 class='card-title'>";
-                            echo $info['nombre'] . "</h5>";
-                            echo "<p class='card-text'>";
-                            echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                            echo "Modelo: " . $info['modelo'] . "<br>";
-                            echo "Precio: " . $info['precio'] . "€ <br></p>";
-                            echo "<a href='banco.php' class='btn btn-dark'>Ver Producto</a> </div>";
-                            ?>
-                        </div>
+              echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+              echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>";
+              echo $info['nombre'] . "</h5>";
+              echo "<p class='card-text'>";
+              echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+              echo "Modelo: " . $info['modelo'] . "<br>";
+              echo "Precio: " . $info['precio'] . "€ <br></p>";
+              echo "<a href='asiento.php' class='btn btn-dark'>Ver Producto</a> </div>";
+              ?>
+            </div>
+            <div class="card" style="width: 15em;">
+              <?php
+              $query = "SELECT * FROM articulos WHERE id = 5";
+              $res = mysqli_query($conexion, $query);
+              $info = mysqli_fetch_array($res);
+
+              echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+              echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>";
+              echo $info['nombre'] . "</h5>";
+              echo "<p class='card-text'>";
+              echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+              echo "Modelo: " . $info['modelo'] . "<br>";
+              echo "Precio: " . $info['precio'] . "€ <br></p>";
+              echo "<a href='banco.php' class='btn btn-dark'>Ver Producto</a> </div>";
+              ?>
+            </div>
 
             <div class="card" style="width: 15em;">
-                            <?php
-                            $query = "SELECT * FROM articulos WHERE id = 20";
-                            $res = mysqli_query($conexion, $query);
-                            $info = mysqli_fetch_array($res);
+              <?php
+              $query = "SELECT * FROM articulos WHERE id = 20";
+              $res = mysqli_query($conexion, $query);
+              $info = mysqli_fetch_array($res);
 
-                            echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
-                            echo "<div class='card-body'>";
-                            echo "<h5 class='card-title'>";
-                            echo $info['nombre'] . "</h5>";
-                            echo "<p class='card-text'>";
-                            echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
-                            echo "Modelo: " . $info['modelo'] . "<br>";
-                            echo "Precio: " . $info['precio'] . "€ <br></p>";
-                            echo "<a href='mesa-plegable.php' class='btn btn-dark'>Ver Producto</a> </div>";
-                            ?>
-                        </div>
+              echo "<img src='../../imagenestfg/" . $info['imagen'] . "'>";
+              echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>";
+              echo $info['nombre'] . "</h5>";
+              echo "<p class='card-text'>";
+              echo $info['nombre'] . " " . $info['marca'] . " " . $info['caracteristica'] . '<br>';
+              echo "Modelo: " . $info['modelo'] . "<br>";
+              echo "Precio: " . $info['precio'] . "€ <br></p>";
+              echo "<a href='mesa-plegable.php' class='btn btn-dark'>Ver Producto</a> </div>";
+              ?>
+            </div>
           </div>
         </div>
       </div>
@@ -312,52 +312,9 @@
     </div>
   </article>
 
-  <footer>
-    <div class="imagenes">
-      <?php
-      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
-      $res = mysqli_query($conexion, $query);
-      $imagen = mysqli_fetch_assoc($res);
-      ?>
-      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
-      <a href="http://www.coferdroza.es/" target="_blank">
-        <?php
-        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
-        $res = mysqli_query($conexion, $query);
-        $imagen = mysqli_fetch_assoc($res);
-        ?>
-        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
-    </div>
-
-    <div class="d-flex" style="height: 200px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="contacto">
-      <p><strong>Contacto</strong></p>
-      <p><i class="fab fa-whatsapp"></i>&nbsp;<strong>WhatsApp</strong> &nbsp; 626 27 29 19</p>
-      <p><i class="fas fa-phone"></i>&nbsp;<strong>Telefono</strong> &nbsp; 96 217 01 97 - 96 217 04 04</p>
-      <p><i class="fas fa-at"></i>&nbsp;<strong>Correo</strong> &nbsp; info@ferreteriagabaldon.es</p>
-      <p><i class="far fa-clock"></i>&nbsp;<strong>Horario</strong> &nbsp; De Lunes a Viernes de 8:30-14:00 y de 16:00 a
-        19:30 <br>Sabados de 9:30 a 13:00</p>
-    </div>
-
-    <div class="d-flex" style="height: 200px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="ubicacion">
-      <p><strong>Donde Encontrarnos</strong></p>
-      <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
-        <?php
-        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
-        $res = mysqli_query($conexion, $query);
-        $imagen = mysqli_fetch_assoc($res);
-        ?>
-        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
-    </div>
-  </footer>
+  <?php
+    include("../../templates/footer.php");
+    ?>
 </body>
 
 </html>

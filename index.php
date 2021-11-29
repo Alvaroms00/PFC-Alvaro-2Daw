@@ -23,7 +23,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
   <script src="js/cookies.js" defer></script>
-  <script src="js/carrito.js" defer></script>
 </head>
 
 <body>
@@ -45,7 +44,7 @@
       <div class="buscar">
         <form method="GET" action="">
           <input type="search" name="buscar" placeholder="Busca nuestros productos">
-          <a href="html/busqueda.php" class="btn btn-light">Buscar</a>
+          <a href="" class="btn btn-light">Buscar</a>
         </form>
       </div>
 
@@ -352,7 +351,7 @@
   </article>
 
   <?php
-  include("html/footer.php");
+  include("templates/footer.php");
   ?>
 
   <div class="cookies activo" id="cookies">

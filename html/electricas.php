@@ -24,7 +24,7 @@
 
 <body>
   <?php
-  include("header.php");
+ include("../templates/header.php")
   ?>
 
   <article>
@@ -135,7 +135,7 @@
             $query = "SELECT * FROM articulos WHERE familia = 'electricas' ORDER BY nombre ASC";
             $res = mysqli_query($conexion, $query);
             while ($info = mysqli_fetch_array($res)) {
-              include("articulo.php");
+              include("../templates/articulo.php");
             }
             break;
 
@@ -143,7 +143,7 @@
             $query = "SELECT * FROM articulos WHERE familia = 'electricas' ORDER BY nombre DESC";
             $res = mysqli_query($conexion, $query);
             while ($info = mysqli_fetch_array($res)) {
-              include("articulo.php");
+              include("../templates/articulo.php");
             }
             break;
 
@@ -151,7 +151,7 @@
             $query = "SELECT * FROM articulos WHERE familia = 'electricas' ORDER BY precio ASC";
             $res = mysqli_query($conexion, $query);
             while ($info = mysqli_fetch_array($res)) {
-              include("articulo.php");
+              include("../templates/articulo.php");
             }
             break;
 
@@ -159,7 +159,7 @@
             $query = "SELECT * FROM articulos WHERE familia = 'electricas' ORDER BY precio DESC";
             $res = mysqli_query($conexion, $query);
             while ($info = mysqli_fetch_array($res)) {
-              include("articulo.php");
+              include("../templates/articulo.php");
             }
             break;
 
@@ -167,7 +167,7 @@
             $query = "SELECT * FROM articulos WHERE familia = 'electricas'";
             $res = mysqli_query($conexion, $query);
             while ($info = mysqli_fetch_array($res)) {
-              include("articulo.php");
+              include("../templates/articulo.php");
             }
             break;
         }
@@ -175,7 +175,7 @@
         $query = "SELECT * FROM articulos WHERE familia = 'electricas'";
             $res = mysqli_query($conexion, $query);
             while ($info = mysqli_fetch_array($res)) {
-              include("articulo.php");
+              include("../templates/articulo.php");
             }
       }
       ?>
@@ -184,7 +184,7 @@
   </article>
 
   <?php
-  include("footer.php");
+ include("../templates/footer.php")
   ?>
   <script src="../js/sidebars.js"></script>
 </body>

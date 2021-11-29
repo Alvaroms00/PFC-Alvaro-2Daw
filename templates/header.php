@@ -11,13 +11,6 @@
             </a>
         </div>
 
-        <div class="buscar">
-            <form method="GET" action="">
-                <input type="search" name="buscar" placeholder="Busca nuestros productos">
-                <input type="submit">
-            </form>
-        </div>
-
         <li class="carrito">
             <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
             <div id="carrito-container">
