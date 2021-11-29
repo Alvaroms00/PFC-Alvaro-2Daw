@@ -195,7 +195,7 @@
             </form>
         </div>
 
-        <table>
+        <table id="articulos" class="table table-striped table-bordered">
             <thead>
                 <th>Imagen</th>
                 <th>Numero de referencia</th>
@@ -274,6 +274,11 @@
         </div>
     </footer>
     <script src="../js/productos.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
 </body>
 
 </html>

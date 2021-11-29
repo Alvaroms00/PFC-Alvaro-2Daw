@@ -21,7 +21,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
   <script src="../js/sidebars.js"></script>
-  <script src="../js/carrito.js"></script>
+  <script src="../js/carrito.js" defer></script>
+  <script src="../js/filtro.js" defer></script>
 
 </head>
 
@@ -117,26 +118,68 @@
       </div>
     </aside>
 
-    <form action="POST">
-      <select name="id" class="btn btn-white">
+    <form action="" method="POST">
+      <select name="filtro" class="btn btn-white">
         <option value="1">Orden alfabético (A-Z)</option>
         <option value="2">Orden alfabético inverso (Z-A)</option>
         <option value="3">Precio más bajo a más alto</option>
         <option value="4">Precio más alto a más bajo</option>
       </select>
-      <button type="submit" class="btn btn-dark">Aplicar</button>
+      <button type="submit" class="btn btn-dark" id="aplicar">Aplicar</button>
     </form>
+
 
     <p>Aqui esta nuestra selección de las mejores tijeras de podar del mercado</p>
     <div class="productos">
       <?php
-      $response = json_decode(file_get_contents('http://localhost/PFC-Alvaro-2Daw/api/productos/api-productos.php?familia=tijeras'), true);
-      if ($response['statuscode'] == 200) {
-        foreach ($response['items'] as $item) {
-          include('articulo.php');
+      if (isset($_POST['filtro'])) {
+        switch ($_POST['filtro']) {
+          case '1':
+            $query = "SELECT * FROM articulos WHERE familia = 'tijeras' ORDER BY marca ASC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          case '2':
+            $query = "SELECT * FROM articulos WHERE familia = 'tijeras' ORDER BY marca DESC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          case '3':
+            $query = "SELECT * FROM articulos WHERE familia = 'tijeras' ORDER BY precio ASC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          case '4':
+            $query = "SELECT * FROM articulos WHERE familia = 'tijeras' ORDER BY precio DESC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          default:
+            $query = "SELECT * FROM articulos WHERE familia = 'tijeras'";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
         }
-      } else {
-        echo $response['response'];
+      }else{
+        $query = "SELECT * FROM articulos WHERE familia = 'tijeras'";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
       }
       ?>
     </div>

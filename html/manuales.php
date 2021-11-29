@@ -116,26 +116,67 @@
       </div>
     </aside>
 
-    <form action="POST">
-      <select name="id" class="btn btn-white">
+    <form action="" method="POST">
+      <select name="filtro" class="btn btn-white">
         <option value="1">Orden alfabético (A-Z)</option>
         <option value="2">Orden alfabético inverso (Z-A)</option>
         <option value="3">Precio más bajo a más alto</option>
         <option value="4">Precio más alto a más bajo</option>
       </select>
-      <button type="submit" class="btn btn-dark">Aplicar</button>
+      <button type="submit" class="btn btn-dark" id="aplicar">Aplicar</button>
     </form>
 
     <p>Todo tipo de herramientas para el campo y jardín</p>
     <div class="productos">
       <?php
-      $response = json_decode(file_get_contents('http://localhost/PFC-Alvaro-2Daw/api/productos/api-productos.php?familia=manuales'), true);
-      if ($response['statuscode'] == 200) {
-        foreach ($response['items'] as $item) {
-          include('articulo.php');
+      if (isset($_POST['filtro'])) {
+        switch ($_POST['filtro']) {
+          case '1':
+            $query = "SELECT * FROM articulos WHERE familia = 'manuales' ORDER BY nombre ASC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          case '2':
+            $query = "SELECT * FROM articulos WHERE familia = 'manuales' ORDER BY nombre DESC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          case '3':
+            $query = "SELECT * FROM articulos WHERE familia = 'manuales' ORDER BY precio ASC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          case '4':
+            $query = "SELECT * FROM articulos WHERE familia = 'manuales' ORDER BY precio DESC";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
+
+          default:
+            $query = "SELECT * FROM articulos WHERE familia = 'manuales'";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
+            break;
         }
-      } else {
-        echo $response['response'];
+      }else{
+        $query = "SELECT * FROM articulos WHERE familia = 'manuales'";
+            $res = mysqli_query($conexion, $query);
+            while ($info = mysqli_fetch_array($res)) {
+              include("articulo.php");
+            }
       }
       ?>
     </div>
