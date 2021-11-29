@@ -158,12 +158,12 @@
                         $precio = $_POST["precio"];
                         $familia = $_POST["familia"];
 
-                        $editar = "UPDATE articulos SET nombre = $nombre, caracteristica = $caracteristica, marca = $marca, modelo = $modelo, precio = $precio, familia = $familia WHERE referencia = $referencia";
+                        $editar = "UPDATE articulos SET nombre = '$nombre', caracteristica = '$caracteristica', marca = '$marca', modelo = '$modelo', precio = '$precio', familia = '$familia' WHERE referencia = $referencia";
                     }
-                    if (mysqli_query($conexion, $eliminar)) {
-                        echo "Se ha eliminado correctamente";
+                    if (mysqli_query($conexion, $editar)) {
+                        echo "Se ha editado correctamente";
                     } else {
-                        echo "Error";
+                        echo "No se ha podido editar el producto";
                     }
                 }
                 ?>
@@ -188,7 +188,7 @@
                     if (mysqli_query($conexion, $eliminar)) {
                         echo "Se ha eliminado correctamente";
                     } else {
-                        echo "Error";
+                        echo "El producto ya no existe";
                     }
                 }
                 ?>

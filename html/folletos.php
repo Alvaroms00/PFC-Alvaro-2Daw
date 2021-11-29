@@ -79,8 +79,9 @@
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto calefaccion">
-          <div class="card-body">
+          <a href="../folletos/CALEFACCION_2021_-_FERRYMAS.pdf" target="_blank" class="texto">
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
+          </a>          <div class="card-body">
             <a href="../folletos/CALEFACCION_2021_-_FERRYMAS.pdf" target="_blank" class="texto">Folleto Calefacción
               2021</a>
             <a href="../folletos/CALEFACCION_2021_-_FERRYMAS.pdf" class="btn btn-dark"
@@ -94,8 +95,9 @@
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto Poda">
-          <div class="card-body">
+          <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" target="_blank" class="texto">
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
+          </a>          <div class="card-body">
             <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" target="_blank" class="texto">Folleto Poda 2021</a>
             <a href="../folletos/PODA_2021_-_FERRYMAS.pdf" class="btn btn-dark"
               download="PODA_2021_-_FERRYMAS">Descargar</a>
@@ -108,8 +110,9 @@
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Catalogo abrasivos">
-          <div class="card-body">
+          <a href="../folletos/101_ABRASIVOS.pdf" target="_blank" class="texto">
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
+          </a>          <div class="card-body">
             <a href="../folletos/101_ABRASIVOS.pdf" target="_blank" class="texto">Catalogo abrasivos 2021</a>
             <a href="../folletos/101_ABRASIVOS.pdf" class="btn btn-dark" download="101_ABRASIVOS.pdf">Descargar</a>
           </div>
@@ -123,8 +126,9 @@
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Catalogo cocina">
-          <div class="card-body">
+          <a href="../folletos/201_ACCESORIOS_COCINA.pdf" target="_blank" class="texto">
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
+          </a>          <div class="card-body">
             <a href="../folletos/201_ACCESORIOS_COCINA.pdf" target="_blank" class="texto">Catalogo cocina 2021</a>
             <a href="../folletos/201_ACCESORIOS_COCINA.pdf" class="btn btn-dark"
               download="201_ACCESORIOS_COCINA.pdf">Descargar</a>
@@ -137,8 +141,9 @@
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Catalogo Profer">
-          <div class="card-body">
+          <a href="../folletos/Catálogo PROFER.pdf" target="_blank" class="texto">
+          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
+          </a>          <div class="card-body">
             <a href="../folletos/Catálogo PROFER.pdf" target="_blank" class="texto">Catalogo Profer</a>
             <a href="../folletos/Catálogo PROFER.pdf" class="btn btn-dark" download="Catálogo PROFER.pdf">Descargar</a>
           </div>
@@ -150,7 +155,9 @@
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
           ?>
+          <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" target="_blank" class="texto">
           <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" class="card-img-top" alt="Folleto profesional">
+          </a>
           <div class="card-body">
             <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" target="_blank" class="texto">Folleto Profesional Otoño</a>
             <a href="../folletos/PROFESIONAL_OTOÑO_2021.pdf" class="btn btn-dark"

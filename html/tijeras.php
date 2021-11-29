@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/productos.css">
   <link rel="stylesheet" href="../css/sidebars.css">
-  
+
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
@@ -26,74 +26,9 @@
 </head>
 
 <body>
-  <header>
-
-    <nav class="header">
-      <div class="logo">
-        <a href="../index.php">
-          <?php
-          $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
-          $res = mysqli_query($conexion, $query);
-          $imagen = mysqli_fetch_assoc($res);
-          ?>
-          <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" title="Ferretería Gabaldón">
-        </a>
-      </div>
-
-      <div class="buscar">
-        <form method="GET" action="">
-          <input type="search" name="buscar" placeholder="Busca nuestros productos">
-          <input type="submit">
-        </form>
-      </div>
-
-      <li class="carrito">
-        <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
-        <div id="carrito-container">
-          <div id="tabla">
-          </div>
-        </div>
-      </li>
-
-      <div class="user">
-        <i class="fas fa-user"></i>
-        <a href="login.php">Iniciar Sesión</a>
-      </div>
-    </nav>
-
-  </header>
-
-  <div class="cabecera">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="nosotros.php">Nosotros</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="tijeras.php">Tijeras electricas</a></li>
-              <li><a class="dropdown-item" href="manuales.php">Herramientas manuales</a></li>
-              <li><a class="dropdown-item" href="electricas.php">Herraminetas electricas</a></li>
-              <li><a class="dropdown-item" href="epis.php">Epis</a></li>
-              <li><a class="dropdown-item" href="jardin.php">Jardín</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="folletos.php">Folletos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
+  <?php
+  include("header.php");
+  ?>
   <article>
     <aside>
       <div class="flex-shrink-0 bg-white" style="width: 280px;">
@@ -198,62 +133,20 @@
       $response = json_decode(file_get_contents('http://localhost/PFC-Alvaro-2Daw/api/productos/api-productos.php?familia=tijeras'), true);
       if ($response['statuscode'] == 200) {
         foreach ($response['items'] as $item) {
-            include('articulo.php');
+          include('articulo.php');
         }
       } else {
         echo $response['response'];
       }
       ?>
     </div>
-    
+
   </article>
 
-  <footer>
-    <div class="imagenes">
-      <?php
-      $query = "SELECT tipo, imagen FROM imagenes WHERE id = 41";
-      $res = mysqli_query($conexion, $query);
-      $imagen = mysqli_fetch_assoc($res);
-      ?>
-      <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>">
-      <a href="http://www.coferdroza.es/" target="_blank">
-        <?php
-        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 42";
-        $res = mysqli_query($conexion, $query);
-        $imagen = mysqli_fetch_assoc($res);
-        ?>
-        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>"></a>
-    </div>
+  <?php
+  include("footer.php");
+  ?>
 
-    <div class="d-flex" style="height: 200px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="contacto">
-      <p><strong>Contacto</strong></p>
-      <p><i class="fab fa-whatsapp"></i>&nbsp;<strong>WhatsApp</strong> &nbsp; 626 27 29 19</p>
-      <p><i class="fas fa-phone"></i>&nbsp;<strong>Telefono</strong> &nbsp; 96 217 01 97 - 96 217 04 04</p>
-      <p><i class="fas fa-at"></i>&nbsp;<strong>Correo</strong> &nbsp; info@ferreteriagabaldon.es</p>
-      <p><i class="far fa-clock"></i>&nbsp;<strong>Horario</strong> &nbsp; De Lunes a Viernes de 8:30-14:00 y de 16:00 a
-        19:30 <br>Sabados de 9:30 a 13:00</p>
-    </div>
-
-    <div class="d-flex" style="height: 200px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="ubicacion">
-      <p><strong>Donde Encontrarnos</strong></p>
-      <p><i class="fas fa-map-marked-alt"></i> &nbsp; P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)</p>
-      <a href="https://www.google.com/maps/place/Ferreteria+Gabaldon+S.L./@39.5761743,-1.2059627,17.87z/data=!4m5!3m4!1s0xd60cb541f01828b:0xe7d82c7577c175f0!8m2!3d39.5762165!4d-1.2057934" target="_blank">
-        <?php
-        $query = "SELECT tipo, imagen FROM imagenes WHERE id = 45";
-        $res = mysqli_query($conexion, $query);
-        $imagen = mysqli_fetch_assoc($res);
-        ?>
-        <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" alt="P.I El Melero, Avda. Industria, 5 - 46300 Utiel (Valencia)"></a>
-    </div>
-  </footer>
 </body>
 
 </html>
