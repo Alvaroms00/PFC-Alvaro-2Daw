@@ -125,11 +125,6 @@ input{
     border-width: 1px; 
 }
 
-.descripcion{
-    display: flex;
-    flex-direction: column;
-}
-
 .relacionados{
     margin: 20px;
     display: flex;
