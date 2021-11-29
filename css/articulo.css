@@ -34,7 +34,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .producto{
@@ -44,6 +44,7 @@ nav{
     align-items: center;
     gap: 70px;
     width: 1355px;
+    height: 450px;
 }
 
 .producto-desc{
@@ -73,7 +74,7 @@ nav a:hover{
 
 .producto img{
     width: 446px;
-    height: 357px;
+    height: 400px;
 }
 
 .producto h1{

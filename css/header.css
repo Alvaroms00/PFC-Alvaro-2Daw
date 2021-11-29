@@ -63,7 +63,7 @@ header a:hover{
     padding: 10px;
     box-sizing: border-box;
     position: absolute;
-    right: 0;
+    right: 50;
     margin-top: 10px;
     display: none;
 }

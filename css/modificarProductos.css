@@ -1,0 +1,58 @@
+table{
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+th, td{
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.formulario p{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    background-color: #fbfbfb; 
+    width: 300px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #b5bd00;   
+    padding-left: 10px;
+}
+
+#agregar{
+    display: none;
+}
+
+#editar{
+    display: none;
+}
+
+#eliminar{
+    display: none;
+}

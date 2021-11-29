@@ -2,14 +2,14 @@
 
 include_once 'productos.php';
 
-if(isset($_GET['categoria'])){
-    $categoria = $_GET['categoria'];
+if(isset($_GET['familia'])){
+    $familia = $_GET['familia'];
 
-    if($categoria == ''){
-        echo json_encode(['statuscode' => 400, 'response' => 'No existe esa categoria']);
+    if($familia == ''){
+        echo json_encode(['statuscode' => 400, 'response' => 'No existe esa familia']);
     }else{
         $productos = new Productos();
-        $items = $productos->getItemsByCategory($categoria);
+        $items = $productos->getItemsByCategory($familia);
 
         echo json_encode(['statuscode' => 200, 'items' => $items]);
     }

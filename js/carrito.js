@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () =>{
     const cookies = document.cookie.split(';');
     let cookie = null;
-    cookies.forEach(item => {
-        if (item.indexOf('items') > -1) {
+    cookies.forEach(item =>{
+        if(item.indexOf('items') > -1){
             cookie = item;
         }
     });
-    if (cookie != null) {
+    if(cookie != null){
         const count = cookie.split('=')[1];
         console.log(count);
         document.querySelector('.btn-carrito').innerHTML = `(${count}) Carrito`;
@@ -15,32 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const bCarrito = document.querySelector('.btn-carrito');
 
-bCarrito.addEventListener('click', (e) => {
+bCarrito.addEventListener('click', (e) =>{
     e.preventDefault();
     const carritoContainer = document.querySelector('#carrito-container');
 
-    if (carritoContainer.style.display == '') {
+    if(carritoContainer.style.display == ''){
         carritoContainer.style.display = 'block';
 
         actualizarCarritoUI();
-    } else {
+    }else{
         carritoContainer.style.display = '';
     }
-
+    
 });
 
-function actualizarCarritoUI() {
+function actualizarCarritoUI(){
     fetch('http://localhost/PFC-Alvaro-2Daw/api/carrito/api-carrito.php?action=mostrar')
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-            let tablaCont = document.querySelector('#tabla');
-            let precioTotal = '';
-            let html = '';
-            data.items.forEach(element => {
-                html += `
+    .then(response =>{
+        return response.json();
+    })
+    .then(data =>{
+        console.log(data);
+        let tablaCont = document.querySelector('#tabla');
+        let precioTotal = '';
+        let html = ``;
+        data.items.forEach(element => {
+            html += `
                 <div class='fila'>
                     <div class='imagen'><img src='img/${element.imagen}' width='100' /></div>
                     <div class='info'>
@@ -52,50 +52,50 @@ function actualizarCarritoUI() {
                     </div>
                 </div>
             `;
-            });
-
-
-            precioTotal = `<p>Total: $${data.info.total}</p>`;
-            tablaCont.innerHTML = precioTotal + html;
-            document.cookie = `items=${data.info.count}`;
-            document.querySelector('.btn-carrito').innerHTML = `(${data.info.count}) Carrito`;
-
-            document.querySelectorAll('.btn-remove').forEach(boton => {
-                boton.addEventListener('click', () => {
-                    const id = boton.parentElement.parentElement.children[0].value;
-                    removeItemFromCarrito(id);
-                })
-            });
         });
+
+        
+        precioTotal = `<p>Total: $${data.info.total}</p>`;
+        tablaCont.innerHTML = precioTotal + html;
+        document.cookie = `items=${data.info.count}`;
+        document.querySelector('.btn-carrito').innerHTML = `(${data.info.count}) Carrito`;
+
+        document.querySelectorAll('.btn-remove').forEach(boton =>{
+            boton.addEventListener('click', () => {
+                const id = boton.parentElement.parentElement.children[0].value;
+                removeItemFromCarrito(id);
+            })
+        });
+    });
 }
 
-const botones = document.querySelectorAll('btn-add');
+const botones = document.querySelectorAll('button');
 
 botones.forEach(boton => {
     const id = boton.parentElement.parentElement.children[0].value;
 
-    boton.addEventListener('click', e => {
+    boton.addEventListener('click', e =>{
         addItemToCarrito(id);
     });
 });
 
-const addItemToCarrito = id => {
-    fetch('http://localhost/PFC-Alvaro-2Daw/api/carrito/api-carrito.php?action=add&id=' + id)
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            actualizarCarritoUI();
-        });
+const addItemToCarrito = id =>{
+    fetch('http://localhost/PFC-Alvaro-2Daw/api/carrito/api-carrito.php?add&id=' + id)
+    .then(response =>{
+        return response.text();
+    })
+    .then(data =>{
+        actualizarCarritoUI();
+    });
 };
 
-const removeItemFromCarrito = id => {
+const removeItemFromCarrito = id =>{
     fetch('http://localhost/PFC-Alvaro-2Daw/api/carrito/api-carrito.php?action=remove&id=' + id)
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            console.log(data.statuscode);
-            actualizarCarritoUI();
-        });
+    .then(res =>{
+        return res.json();
+    })
+    .then(data =>{
+        console.log(data.statuscode);
+        actualizarCarritoUI();
+    });
 };
