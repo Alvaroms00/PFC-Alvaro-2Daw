@@ -225,7 +225,7 @@
                     </div>
                     <div class="botones">
                         <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                        <button class="btn-add btn-dark">Añadir al carrito</button>
+                        <button class="btn btn-dark">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
