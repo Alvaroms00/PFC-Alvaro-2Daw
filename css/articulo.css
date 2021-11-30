@@ -151,6 +151,17 @@ input{
     color: #b5bd00;
 }
 
+@media (max-width: 1700px){
+    .producto{
+        width: 1100px;
+    }
+
+    .descripcion{
+        width: 1100px;
+        height: 642px;
+    }
+}
+
 @media (max-width: 1400px) {
     .producto{
         width: 900px;

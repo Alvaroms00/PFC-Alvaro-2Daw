@@ -8,6 +8,15 @@
     padding-left: 30px;
 }
 
+#formulario{
+    display: block;
+}
+
+.envio{
+    margin: 0 auto;
+    display: none;
+}
+
 input{
     background-color: #fbfbfb; 
     width: 408px; 

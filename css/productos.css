@@ -64,6 +64,13 @@ form {
     border-color: #b5bd00;
 }
 
+@media (max-width: 1700px){
+    .caja {
+        width: 550px;
+        height: 320px;
+    }
+}
+
 @media (max-width: 1400px) {
     aside {
         width: 298px;
@@ -77,7 +84,7 @@ form {
     }
 
     .caja p {
-        margin: 25px 50px;
+        margin: 15px auto;
     }
 
     .caja img {

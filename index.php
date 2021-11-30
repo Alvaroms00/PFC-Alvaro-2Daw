@@ -41,13 +41,6 @@
         </a>
       </div>
 
-      <div class="buscar">
-        <form method="GET" action="">
-          <input type="search" name="buscar" placeholder="Busca nuestros productos">
-          <a href="" class="btn btn-light">Buscar</a>
-        </form>
-      </div>
-
       <li class="carrito">
         <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
         <div id="carrito-container">
@@ -358,6 +351,7 @@
     <h3 class="titulo">Cookies</h3>
     <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
     <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+    <button class="boton" id="btn-aceptar-cookies">Rechazar todas</button>
     <a class="enlace" href="http://www.interior.gob.es/politica-de-cookies" target="_blank">Aviso de Cookies</a>
   </div>
 </body>
