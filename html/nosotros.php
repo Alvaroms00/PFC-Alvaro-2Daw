@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<?php
+  <?php
   include("../php/conectar_bd.php");
   ?>
   <meta charset="UTF-8">
@@ -11,17 +11,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- css -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/nosotros.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
@@ -30,7 +27,7 @@
     <nav class="header">
       <div class="logo">
         <a href="../index.php">
-        <?php
+          <?php
           $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
           $res = mysqli_query($conexion, $query);
           $imagen = mysqli_fetch_assoc($res);
@@ -53,8 +50,7 @@
             <a class="nav-link active" href="nosotros.php">Nosotros</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="tijeras.php">Tijeras electricas</a></li>
               <li><a class="dropdown-item" href="manuales.php">Herramientas manuales</a></li>
@@ -81,23 +77,26 @@
     </p>
 
     <p><strong>Titularidad del Taller:</strong></p>
-    <li>Agustín Gabaldón</li>
-    <li>Ricardo Gabaldón Ballesteros</li>
-    <li>Vda. de Ricardo Gabaldón</li> <br>
-
+    <ul>
+      <li>Agustín Gabaldón</li>
+      <li>Ricardo Gabaldón Ballesteros</li>
+      <li>Vda. de Ricardo Gabaldón</li>
+    </ul>
     <p><strong>Titularidad de la Ferretería:</strong></p>
-    <li>Agustín Gabaldón</li>
-    <li>Ricardo Gabaldón Ballesteros</li>
-    <li>Hija de Ricardo Gabaldón</li>
-    <li>Hijo de Ricardo Gabaldón</li>
-    <li>Agustín Gabaldón Ponce y Sobrinos S.L.</li>
-    <li>Ferretería Gabaldón S.L., en la actualidad y su gerente es Daniel Gabaldón Arroyo.</li> <br>
-
+    <ul>
+      <li>Agustín Gabaldón</li>
+      <li>Ricardo Gabaldón Ballesteros</li>
+      <li>Hija de Ricardo Gabaldón</li>
+      <li>Hijo de Ricardo Gabaldón</li>
+      <li>Agustín Gabaldón Ponce y Sobrinos S.L.</li>
+      <li>Ferretería Gabaldón S.L., en la actualidad y su gerente es Daniel Gabaldón Arroyo.</li>
+    </ul>
     <p><strong>Domicilios:</strong></p>
-    <li>1º: C/ Reyes Católicos, 67</li>
-    <li>2º: C/ Antonio Maura, 8</li>
-    <li>Actual: Av. Industria, 5. P.I. El Melero, Utiel</li> <br>
-
+    <ul>
+      <li>1º: C/ Reyes Católicos, 67</li>
+      <li>2º: C/ Antonio Maura, 8</li>
+      <li>Actual: Av. Industria, 5. P.I. El Melero, Utiel</li>
+    </ul>
     <p>
       En el citado taller nuestra actividad ha sido siempre de forma primordial el mantenimiento de empresas y bodegas
       que, en su momento dieron lugar a las patentes de
@@ -107,16 +106,16 @@
       <br>
       A lo largo de los años, además de las citadas máquinas, hemos sido distribuidores exclusivos en algunos casos de:
     </p>
-
-    <li>Moto Vesta (Utiel-Requena)</li>
-    <li>Estufas Sasac (C. Valenciana y Albacete)</li>
-    <li>T.V. Teleavia (Utiel-Requena)</li>
-    <li>Tijeras Electrocoup (Utiel, Requena y la Manchuela)</li>
-    <li>Zanussi (Utiel)</li>
-    <li>Kelvinator (Utiel)</li>
-    <li>DeWalt (Utiel)</li>
-    <li>Makita (Utiel)</li>
-
+    <ul>
+      <li>Moto Vesta (Utiel-Requena)</li>
+      <li>Estufas Sasac (C. Valenciana y Albacete)</li>
+      <li>T.V. Teleavia (Utiel-Requena)</li>
+      <li>Tijeras Electrocoup (Utiel, Requena y la Manchuela)</li>
+      <li>Zanussi (Utiel)</li>
+      <li>Kelvinator (Utiel)</li>
+      <li>DeWalt (Utiel)</li>
+      <li>Makita (Utiel)</li>
+    </ul>
     <p>Hemos pertenecido durante muchos años a Sociedades Distribuidoras de Electrodomésticos, que tuvieron mayor o
       menor transcendencia comercial: CRAE, UCEL, DIVELSA, ELITE y EURONICS. <br>
       Asimismo, hasta su disolución, hemos pertenecido a COFEDEVA y actualmente a COFERDROZA, que ambas son de
@@ -138,13 +137,14 @@
 
     <p>Desde 2002, estamos ubicados en el Polígono Industrial de Utiel en una nave de propiedad familiar y entre otras,
       nuestras actuaciones son:</p>
-
-    <li>Suministros Industriales y Profesionales para empresas y Particulares.</li>
-    <li>Suministros de Albañilería.</li>
-    <li>Herramientas y Máquinas eléctricas y baterías.</li>
-    <li>Suministros para bodegas y vendimias.</li>
-    <li>Herrajes.</li>
-    <li>Tornillería, correas trapeciales, rodamientos, mangueras, etc...</li>
+    <ul>
+      <li>Suministros Industriales y Profesionales para empresas y Particulares.</li>
+      <li>Suministros de Albañilería.</li>
+      <li>Herramientas y Máquinas eléctricas y baterías.</li>
+      <li>Suministros para bodegas y vendimias.</li>
+      <li>Herrajes.</li>
+      <li>Tornillería, correas trapeciales, rodamientos, mangueras, etc...</li>
+    </ul>
   </article>
 
   <footer>
