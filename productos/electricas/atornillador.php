@@ -79,9 +79,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../../html/folletos.php">Folletos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../html/contacto.php">Contacto</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -199,7 +196,7 @@
                 $info = mysqli_fetch_assoc($res);
                 echo "<div class='producto-img'>";
                 echo "<a data-fancybox='single' data-src='../../imagenestfg/atornillador.jpg'>";
-                echo "<img src='../../imagenestfg/" . $info['imagen'] . "'></a></div>";
+                echo "<img src='../../imagenestfg/" . $info['imagen'] . "'></a><p>PRODUCTO DESTACADO</p></div>";
                 echo "<div class='producto-info'>";
                 echo "<div class='titulo'>";
                 echo "<h1>" . $info['nombre'] . " " . $info['caracteristica'] . "</h1>";

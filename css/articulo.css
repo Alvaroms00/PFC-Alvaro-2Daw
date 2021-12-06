@@ -47,6 +47,12 @@ nav{
     height: 450px;
 }
 
+.producto-img{
+    text-align: center;
+    color: #b5bd00;
+    font-size: 26px;    
+}
+
 .producto-desc{
     margin-top: 15px;
     margin-bottom: 15px;

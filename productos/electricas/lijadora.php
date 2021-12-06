@@ -79,9 +79,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../../html/folletos.php">Folletos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../html/contacto.php">Contacto</a>
-                    </li>
                 </ul>
             </div>
         </nav>

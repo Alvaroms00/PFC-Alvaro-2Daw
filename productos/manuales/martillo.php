@@ -39,7 +39,7 @@
         <nav class="header">
             <div class="logo">
                 <a href="../../index.php">
-                    <<?php
+                    <?php
                         $query = "SELECT tipo, imagen FROM imagenes WHERE id = 39";
                         $res = mysqli_query($conexion, $query);
                         $imagen = mysqli_fetch_assoc($res);
@@ -78,9 +78,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../../html/folletos.php">Folletos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../html/contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,6 @@
 <head>
     <?php
     include("../../php/conectar_bd.php");
-    include("../../api/carrito/carrito.php")
     ?>
     <meta charset="utf-8">
     <title>Ferretería Gabaldón</title>
@@ -81,9 +80,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../../html/folletos.php">Folletos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../html/contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>

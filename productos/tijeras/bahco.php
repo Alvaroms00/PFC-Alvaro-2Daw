@@ -85,9 +85,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../../html/folletos.php">Folletos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../html/contacto.php">Contacto</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -206,7 +203,7 @@
                 echo "<div class='producto-img'>";
                 echo "<input type='hidden' id='id' value='" . $item['id'] . "'>";
                 echo "<a data-fancybox='single' data-src='../../imagenestfg/tijerabahco.jpg'>";
-                echo "<img src='../../imagenestfg/" . $item['imagen'] . "'></a></div>";
+                echo "<img src='../../imagenestfg/" . $item['imagen'] . "'></a><p>PRODUCTO DESTACADO</p></div>";
                 echo "<div class='producto-item'>";
                 echo "<div class='titulo'>";
                 echo "<h1>" . $item['nombre'] . " " . $item['caracteristica'] . "</h1>";
