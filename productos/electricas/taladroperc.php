@@ -42,11 +42,6 @@
                     <img src="../../imagenestfg/logo ferreteria.jpg" title="Ferretería Gabaldón">
                 </a>
             </div>
-
-            <div class="carrito">
-                <i class="fas fa-shopping-cart"></i>
-                <a href="carrito.php">Carrito</a>
-            </div>
         </nav>
     </header>
 
@@ -210,7 +205,6 @@
                         <button id='disminuir' class="btn btn-dark" onclick="disminuir()">-</button>
                     </div>
                     <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                    <a href="" class="btn btn-dark">Añadir al Carrito</a>
                 </div>
             </div>
         </div>

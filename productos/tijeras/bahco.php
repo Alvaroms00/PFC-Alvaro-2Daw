@@ -49,14 +49,6 @@
                     <img src="data:<?php echo $imagen['tipo']; ?>;base64,<?php echo base64_encode($imagen['imagen']); ?>" title="Ferretería Gabaldón">
                 </a>
             </div>
-
-            <li class="carrito">
-                <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
-                <div id="carrito-container">
-                    <div id="tabla">
-                    </div>
-                </div>
-            </li>
         </nav>
     </header>
 
@@ -222,7 +214,6 @@
                     </div>
                     <div class="botones">
                         <a href="#descripcion" class="btn btn-dark">Ficha Técnica</a>
-                        <button class="btn btn-dark">Añadir al carrito</button>
                     </div>
                 </div>
             </div>

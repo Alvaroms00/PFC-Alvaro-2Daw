@@ -22,12 +22,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../js/subir.js"></script>
+
 </head>
 
 
 <body>
     <header>
-
         <nav class="header">
             <div class="logo">
                 <a href="../index.php">
@@ -42,6 +43,11 @@
             </div>
         </nav>
     </header>
+    <div class="boton-subir" id="subir">
+        <a id="subir" class="subir">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
     <article>
         <div class="botones">
             <button type="button" class="btn btn-dark" id="botonAgregar">Agregar artículo</button>
@@ -96,7 +102,7 @@
                 <?php
                 if (isset($_POST['agregar'])) {
 
-                    if (isset($_POST["referencia"], $_POST["nombre"], $_POST["caracteristica"], $_POST["marca"], $_POST["modelo"], $_POST["precio"], $_POST["familia"])) {
+                    if (isset($_POST["referencia"], $_POST["nombre"], $_POST["caracteristica"], $_POST["marca"], $_POST["modelo"], $_POST["precio"], $_POST["familia"], $_POST["destacado"])) {
                         $referencia = $_POST["referencia"];
                         $nombre = $_POST["nombre"];
                         $caracteristica = $_POST["caracteristica"];
@@ -104,8 +110,7 @@
                         $modelo = $_POST["modelo"];
                         $precio = $_POST["precio"];
                         $familia = $_POST["familia"];
-
-                        $insertar = "INSERT INTO articulos (referencia, nombre, caracteristica, marca, modelo, precio, familia) VALUES ('$referencia','$nombre','$caracteristica','$marca','$modelo','$precio','$familia')";
+                        $insertar = "INSERT INTO articulos (referencia, nombre, caracteristica, marca, modelo, precio, familia) VALUES ('$referencia','$nombre','$caracteristica','$marca','$modelo','$precio','$familia', '$destacado')";
                     }
                     if (mysqli_query($conexion, $insertar)) {
                         echo "Se han introducido correctamente los datos.";
@@ -150,7 +155,13 @@
 
                 <p>
                     <label for="familia" class="familia">Familia</label>
-                    <input type="text" name="familia" id="numero de ref" placeholder="Familia">
+                    <select name="familia" class="btn btn-white">
+                        <option value="electricas">Herramientas Eléctricas</option>
+                        <option value="epis">Epis</option>
+                        <option value="jardin">Jardín</option>
+                        <option value="manuales">Herramientas manuales</option>
+                        <option value="tijeras">Tijeras Eléctricas</option>
+                    </select>
                 </p>
                 <button type="submit" name="editar" class="btn btn-dark">Editar artículo</button>
                 <?php

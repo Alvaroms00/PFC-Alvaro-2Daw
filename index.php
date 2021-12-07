@@ -41,14 +41,6 @@
         </a>
       </div>
 
-      <li class="carrito">
-        <a href="#" class='btn-carrito'><i class="fas fa-shopping-cart"></i>Carrito</a>
-        <div id="carrito-container">
-          <div id="tabla">
-          </div>
-        </div>
-      </li>
-
       <div class="user">
         <i class="fas fa-user"></i>
         <a href="html/login.php">Iniciar Sesión</a>
