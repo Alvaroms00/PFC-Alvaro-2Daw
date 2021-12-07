@@ -102,7 +102,7 @@
                 <?php
                 if (isset($_POST['agregar'])) {
 
-                    if (isset($_POST["referencia"], $_POST["nombre"], $_POST["caracteristica"], $_POST["marca"], $_POST["modelo"], $_POST["precio"], $_POST["familia"], $_POST["destacado"])) {
+                    if (isset($_POST["referencia"], $_POST["nombre"], $_POST["caracteristica"], $_POST["marca"], $_POST["modelo"], $_POST["precio"], $_POST["familia"])) {
                         $referencia = $_POST["referencia"];
                         $nombre = $_POST["nombre"];
                         $caracteristica = $_POST["caracteristica"];
@@ -110,7 +110,7 @@
                         $modelo = $_POST["modelo"];
                         $precio = $_POST["precio"];
                         $familia = $_POST["familia"];
-                        $insertar = "INSERT INTO articulos (referencia, nombre, caracteristica, marca, modelo, precio, familia) VALUES ('$referencia','$nombre','$caracteristica','$marca','$modelo','$precio','$familia', '$destacado')";
+                        $insertar = "INSERT INTO articulos (referencia, nombre, caracteristica, marca, modelo, precio, familia) VALUES ('$referencia','$nombre','$caracteristica','$marca','$modelo','$precio','$familia')";
                     }
                     if (mysqli_query($conexion, $insertar)) {
                         echo "Se han introducido correctamente los datos.";
