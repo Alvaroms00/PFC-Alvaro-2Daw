@@ -84,9 +84,15 @@
 
                 <p>
                     <label for="familia" class="familia">Familia</label>
-                    <input type="text" name="familia" id="numero de ref" placeholder="Familia" require>
+                    <select name="familia" class="btn btn-white">
+                        <option value="electricas">Herramientas Eléctricas</option>
+                        <option value="epis">Epis</option>
+                        <option value="jardin">Jardín</option>
+                        <option value="manuales">Herramientas manuales</option>
+                        <option value="tijeras">Tijeras Eléctricas</option>
+                    </select>
                 </p>
-                <button type="submit" name="agregar" id="enviar" class="btn btn-light">Agregar artículo</button>
+                <button type="submit" name="agregar" id="enviar" class="btn btn-dark">Agregar artículo</button>
                 <?php
                 if (isset($_POST['agregar'])) {
 
@@ -146,7 +152,7 @@
                     <label for="familia" class="familia">Familia</label>
                     <input type="text" name="familia" id="numero de ref" placeholder="Familia">
                 </p>
-                <button type="submit" name="editar" class="btn btn-light">Editar artículo</button>
+                <button type="submit" name="editar" class="btn btn-dark">Editar artículo</button>
                 <?php
                 if (isset($_POST['editar'])) {
                     if (isset($_POST["referencia"], $_POST["nombre"], $_POST["caracteristica"], $_POST["marca"], $_POST["modelo"], $_POST["precio"], $_POST["familia"])) {
@@ -177,7 +183,7 @@
                     <label for="referencia">Numero de referencia</label>
                     <input type="text" name="referencia" id="referencia" placeholder="Numero de referencia" require>
                 </p>
-                <button type="submit" name="eliminar" class="btn btn-light">Eliminar artículo</button>
+                <button type="submit" name="eliminar" class="btn btn-dark">Eliminar artículo</button>
                 <?php
                 if (isset($_POST['eliminar'])) {
                     if (isset($_POST['referencia'])) {
@@ -195,7 +201,7 @@
             </form>
         </div>
 
-        <table id="articulos" class="table table-striped table-bordered">
+        <table id="articulos">
             <thead>
                 <th>Imagen</th>
                 <th>Numero de referencia</th>
@@ -205,6 +211,8 @@
                 <th>Modelo</th>
                 <th>Precio</th>
                 <th>Familia</th>
+                <th>Destacado</th>
+                <th>Editar/Eliminar</th>
             </thead>
             <tbody>
                 <?php
@@ -221,6 +229,8 @@
                     echo "<td>" . $info['modelo'] . "</td>";
                     echo "<td>" . $info['precio'] . "</td>";
                     echo "<td>" . $info['familia'] . "</td>";
+                    echo "<td>" . $info['destacado'] . "</td>";
+                    echo "<td></td>";
                     echo "</tr>";
                 }
                 ?>

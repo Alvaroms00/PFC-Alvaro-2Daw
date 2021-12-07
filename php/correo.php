@@ -23,7 +23,7 @@ if (isset($_POST['enviar'])) {
             $result = mail($to, $subject, $message, $headers);
     }
     if ($result) {
-        echo "Enviado con exito.";+
+        echo "Enviado con exito.";
         header('Location: index.html', true, 303);
     }else{
         echo "Ha habido un error";
