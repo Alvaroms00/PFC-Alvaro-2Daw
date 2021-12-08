@@ -223,7 +223,6 @@
                 <th>Precio</th>
                 <th>Familia</th>
                 <th>Destacado</th>
-                <th>Editar/Eliminar</th>
             </thead>
             <tbody>
                 <?php
@@ -241,7 +240,6 @@
                     echo "<td>" . $info['precio'] . "</td>";
                     echo "<td>" . $info['familia'] . "</td>";
                     echo "<td>" . $info['destacado'] . "</td>";
-                    echo "<td></td>";
                     echo "</tr>";
                 }
                 ?>
