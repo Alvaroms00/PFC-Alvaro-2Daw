@@ -239,7 +239,13 @@
                     echo "<td>" . $info['modelo'] . "</td>";
                     echo "<td>" . $info['precio'] . "</td>";
                     echo "<td>" . $info['familia'] . "</td>";
-                    echo "<td>" . $info['destacado'] . "</td>";
+                    echo "<td>";
+                    if($info['destacado'] !=  1){
+                        echo "No";
+                    }else{
+                        echo "Sí";
+                    }
+                    echo "</td>";
                     echo "</tr>";
                 }
                 ?>
