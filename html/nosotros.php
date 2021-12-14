@@ -69,8 +69,8 @@
 
   <article>
     <p>Nuestra ferretería nace a finales del siglo XIX, complementaria y suministradora del taller de maquinaria y
-      caldedería que fundaron nuestro Tataraabuelo Agustín Gabaldón. <br>
-      En 1890 ya figuraba como ferretería en sus documentos. <br>
+      caldedería que fundaron nuestro Tataraabuelo Agustín Gabaldón.
+      En 1890 ya figuraba como ferretería en sus documentos.
     </p>
 
     <p><strong>Titularidad del Taller:</strong></p>
@@ -100,7 +100,6 @@
       invención y perfeccionamiento de la máquina estrujadora-derrasparoda de uva con titularidad de Ricardo Gabaldón
       Ballesteros y Ricardo Gabaldón Ponce respectivamente.
       Los documentos están expuestos en el Museo del Vino de Utiel, sede de la denominación de origen Utiel-Requena.
-      <br>
       A lo largo de los años, además de las citadas máquinas, hemos sido distribuidores exclusivos en algunos casos de:
     </p>
     <ul>
@@ -114,7 +113,7 @@
       <li>Makita (Utiel)</li>
     </ul>
     <p>Hemos pertenecido durante muchos años a Sociedades Distribuidoras de Electrodomésticos, que tuvieron mayor o
-      menor transcendencia comercial: CRAE, UCEL, DIVELSA, ELITE y EURONICS. <br>
+      menor transcendencia comercial: CRAE, UCEL, DIVELSA, ELITE y EURONICS.
       Asimismo, hasta su disolución, hemos pertenecido a COFEDEVA y actualmente a COFERDROZA, que ambas son de
       ferretería. También ahora nuestro gerente es miembro de la junta directiva de esta
       última.
