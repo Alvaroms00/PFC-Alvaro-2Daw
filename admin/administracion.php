@@ -22,8 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../../js/subir.js"></script>
-
+    
 </head>
 
 
@@ -44,10 +43,10 @@
         </nav>
     </header>
     <div class="boton-subir" id="subir">
-        <a id="subir" class="subir">
-            <i class="fas fa-chevron-up"></i>
-        </a>
-    </div>
+    <a id="subir" class="subir">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
     <article>
         <div class="botones">
             <button type="button" class="btn btn-dark" id="botonAgregar">Agregar artículo</button>
@@ -91,11 +90,11 @@
                 <p>
                     <label for="familia" class="familia">Familia</label>
                     <select name="familia" class="btn btn-white">
-                        <option value="electricas">Herramientas Eléctricas</option>
-                        <option value="epis">Epis</option>
-                        <option value="jardin">Jardín</option>
-                        <option value="manuales">Herramientas manuales</option>
-                        <option value="tijeras">Tijeras Eléctricas</option>
+                        <option value="Electricas">Herramientas Eléctricas</option>
+                        <option value="Epis">Epis</option>
+                        <option value="Jardin">Jardín</option>
+                        <option value="Manuales">Herramientas manuales</option>
+                        <option value="Tijeras">Tijeras Eléctricas</option>
                     </select>
                 </p>
                 <button type="submit" name="agregar" id="enviar" class="btn btn-dark">Agregar artículo</button>
@@ -156,11 +155,11 @@
                 <p>
                     <label for="familia" class="familia">Familia</label>
                     <select name="familia" class="btn btn-white">
-                        <option value="electricas">Herramientas Eléctricas</option>
-                        <option value="epis">Epis</option>
-                        <option value="jardin">Jardín</option>
-                        <option value="manuales">Herramientas manuales</option>
-                        <option value="tijeras">Tijeras Eléctricas</option>
+                        <option value="Electricas">Herramientas Eléctricas</option>
+                        <option value="Epis">Epis</option>
+                        <option value="Jardin">Jardín</option>
+                        <option value="Manuales">Herramientas manuales</option>
+                        <option value="Tijeras">Tijeras Eléctricas</option>
                     </select>
                 </p>
                 <button type="submit" name="editar" class="btn btn-dark">Editar artículo</button>
@@ -299,11 +298,7 @@
         </div>
     </footer>
     <script src="../js/productos.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
-    </script>
+    <script src="../js/subir.js"></script>
 </body>
 
 </html>

@@ -56,3 +56,30 @@ input{
 #eliminar{
     display: none;
 }
+
+.boton-subir{
+    padding: 0;
+    display: block;
+    position: fixed;
+    z-index: 99;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    text-decoration: none;
+}
+
+.subir{
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: rgba(0,0,0,.5);
+    float: right;
+    text-align: center;
+    border: 1px solid #b5bd00;
+}
+
+.subir:hover{
+    color: white;
+}

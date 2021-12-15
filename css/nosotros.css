@@ -8,9 +8,9 @@ article strong{
 }
 
 article p{
-    text-align: left;
+    text-align: justify;
     margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 800px;
+    width: 1050px;
 }
